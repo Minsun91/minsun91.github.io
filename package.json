@@ -3,17 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-    "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "export": "next export"
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "copyfiles -f index.html build"
   },
-  "homepage": "https://minsun91.github.io/pages/",  
+  "homepage": "https://minsun91.github.io",
   "author": "",
   "license": "ISC",
   "dependencies": {
     "gh-pages": "^6.1.1"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
   }
 }
