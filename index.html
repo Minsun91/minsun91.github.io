@@ -31,7 +31,7 @@
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <!-- <li class="nav-item"><a class="nav-link" href="#team">Team</a></li> -->
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,14 +55,22 @@
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                            <i class="fa-solid fa-database"></i>
+                            <!-- <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i> -->
                         </span>
-                        <h4 class="my-3">Backend</h4>
-                        <p class="text-muted">Typescript</p>
-                        <p class="text-muted">AWS RDS</p>
-                        <p class="text-muted">AWS S3</p>
-                        <p class="text-muted">MySQL</p>
-                        <p class="text-muted">PostgreSQL</p>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h4 class="my-3">Backend</h4>
+                                <p class="text-muted">Typescript</p>
+                                <p class="text-muted">AWS RDS</p>
+                            </div>
+                            <div>
+                                <p class="text-muted">AWS S3</p>
+                                <p class="text-muted">MySQL</p>
+                                <p class="text-muted">PostgreSQL</p>
+                            </div>
+                        </div>
+                        
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
@@ -77,7 +85,8 @@
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                            <i class="fa-solid fa-handshake-simple"></i>
+                            <!-- <i class="fas fa-lock fa-stack-1x fa-inverse"></i> -->
                         </span>
                         <h4 class="my-3">Tool</h4>
                             <p class="text-muted">Github</p>
@@ -116,17 +125,18 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/2.png" alt="..." height="170px"/>
+                                <img class="img-fluid" src="assets/img/portfolio/2.png" alt="..." style="max-height: 170px;" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">CLIPS</div>
-                                <div class="portfolio-caption-subheading text-muted">Application for managing appointments and recommending places around users </div>
+                                <div class="portfolio-caption-subheading text-muted">Application for managing appointments and recommending places around users</div>
                             </div>
                         </div>
+                        
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- Portfolio item 3-->
-                        <div class="portfolio-item"> //data-bs-toggle="modal"
+                        <div class="portfolio-item">
                             <a class="portfolio-link" href="https://minsunportfolio.notion.site/Tindater-5c072580e18443f7918d7ac6d3113a8e">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -199,7 +209,7 @@
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.webp" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>2023-Present</h4>
+                                <h4>2023-</h4>
                                 <h4 class="subheading">Spiritory</h4>
                             </div>
                             <div class="timeline-body"><p class="text-muted">I worked as a backend developer at a startup in Germany, where I implemented features for automatic email sending for all flows, order confirmation PDF generation, data migration from firebase to strapi, and shipping/tracking link generation.</p></div>
@@ -528,7 +538,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-4">
                         <div class="team-member text-center">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" width="224px" height="224px"/>
+                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" width="200px" alt="..." style="max-width: 200px; height: auto;">
                             <!-- <h4>Parveen Anand</h4>
                             <p class="text-muted">Youtube</p> -->
                             <a class="btn btn-dark btn-social mx-2" href="mailto:minsunkim167@gmail.com" aria-label="Parveen Anand Twitter Profile"><i class="fa-regular fa-envelope"></i></a> 
