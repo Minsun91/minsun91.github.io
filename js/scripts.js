@@ -1,13 +1,20 @@
-/*!
-* Start Bootstrap - Agency v7.0.12 (https://startbootstrap.com/theme/agency)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
 window.addEventListener('DOMContentLoaded', event => {
+    const cursor = document.querySelector(".mouse__cursor");
+    const cursor2 = document.querySelector(".mouse__cursor2");
+
+    window.addEventListener("mousemove", (e) => {
+        gsap.to(cursor, {
+            duration: 0.5,
+            left: e.pageX - cursor.clientWidth / 2,
+            top: e.pageY - cursor.clientHeight / 2,
+        });
+
+        gsap.to(cursor2, {
+            duration: 0.7,
+            left: e.pageX - cursor2.clientWidth / 2,
+            top: e.pageY - cursor2.clientHeight / 2,
+        });
+    });
 
     // Navbar shrink function
     var navbarShrink = function () {
