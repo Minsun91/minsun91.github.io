@@ -58,4 +58,18 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // 타이핑 효과 추가
+    const content = "Hi😊​ I'm Minsun, \n nice to meet you.";
+    const text = document.querySelector(".text");
+    let i = 0;
+
+    function typing() {
+        let txt = content[i++];
+        text.innerHTML += txt === "\n" ? "<br/>" : txt;
+        if (i > content.length) {
+            text.textContent = "";
+            i = 0;
+        }
+    }
+    setInterval(typing, 200);
 });
