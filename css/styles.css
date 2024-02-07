@@ -179,7 +179,7 @@ body {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  animation: blink 1s infinite; /* blink 애니메이션을 1초 동안 무한 반복 */
+  animation: blink 1s infinite;
 }
 
 .mouse__cursor2 {
@@ -202,7 +202,7 @@ body {
 
 .mouse__cursor2.active {
   transform: scale(5);
-  background-color:rgba(255, 105, 180, 0.5); /* 변경된 색상 */
+  background-color:rgba(255, 105, 180, 0.5);
 }
 
 
