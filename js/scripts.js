@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
     // 타이핑 효과 추가
-    const content = "Hi😊​ I'm Minsun, \n nice to meet you.";
+    const content = "Hi 😊 I'm Minsun";
     const text = document.querySelector(".text");
     let i = 0;
 
