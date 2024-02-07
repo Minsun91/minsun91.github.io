@@ -153,6 +153,20 @@ body {
 .mouse__text p span {
   color: aqua;
 }
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .mouse__cursor {
   position: absolute;
   left: 0;
@@ -160,13 +174,14 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #fff;
-  background-color: rgba(255, 255, 255, 0.5);
-  background-image: url(img/mouseEffect08-min.jpg);
+  /* border: 2px solid #fff; */
+  background-color: rgba(255, 105, 180, 0.5);
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  animation: blink 1s infinite; /* blink 애니메이션을 1초 동안 무한 반복 */
 }
+
 .mouse__cursor2 {
   position: absolute;
   left: 0;
@@ -175,18 +190,21 @@ body {
   height: 30px;
   z-index: 9998;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 105, 180, 0.5);
   user-select: none;
   pointer-events: none;
   transition: transform 0.3s;
 }
+
 .mouse__cursor.active {
   transform: scale(0);
 }
+
 .mouse__cursor2.active {
   transform: scale(5);
-  background-color: rgba(255, 238, 142, 0.6);
+  background-color:rgba(255, 105, 180, 0.5); /* 변경된 색상 */
 }
+
 
 hr {
   margin: 1rem 0;
