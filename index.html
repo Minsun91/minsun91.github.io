@@ -21,29 +21,30 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <!-- <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars ms-1"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Experiences</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Contact</a></li>
-                </ul>
-            </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">Experiences</a></li>
+                <li class="nav-item"><a class="nav-link" href="#team">Contact</a></li>
+            </ul>
+        </div>
+        <!-- </div> -->
         </div>
     </nav>
-    <!-- Masthead-->
 
     <header class="masthead">
         <div class="container">
@@ -51,11 +52,14 @@
             <div class="masthead-heading text-uppercase text"></div>
             <p>working as a backend developer at a whiskey startup in Germany. <br>
                 I have a passion for fragrances🌱and birds🕊 and I absolutely love traveling 🏝💕 <br><br></p>
-            <a class="btn btn-primary btn-xl text-uppercase"
-                href="https://drive.google.com/file/d/1KKJG1ss3JFsey9nMbLoThHxGQ6jwOv_9/view?usp=sharing"
-                target="_blank">Check my CV</a>
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <a class="btn btn-primary btn-xl text-uppercase"
+                    href="https://drive.google.com/file/d/1KKJG1ss3JFsey9nMbLoThHxGQ6jwOv_9/view?usp=sharing"
+                    target="_blank">Check my CV</a>
+            </div>
         </div>
     </header>
+
 
     <main id="main">
         <div class="mouse__wrap">
@@ -68,59 +72,70 @@
     <!-- Services-->
     <section class="page-section" id="services">
         <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">MINSUN KIM</h2>
-                <h3 class="section-subheading text-muted">Backend web developer</h3>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4 section-box backend-box">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-database fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Backend</h4>
-                    <img src="https://i.postimg.cc/Z5VvnNDJ/typescript.png" width="40px">Typescript
-                    <div class="side">
-                        <img src="https://i.postimg.cc/nrm2v2Q8/Database-copy-Amazon-Red-Shift-512.webp" width="60px">
-                        AWS RDS
-                        <img src="https://i.postimg.cc/CM9bjbN7/s3.png" width="60px">
-                        AWS S3
-                    </div>
-                    <div class="side2">
+            <div data-aos="fade-down" data-aos-duration="1000">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">MINSUN KIM</h2>
+                    <h3 class="section-subheading text-muted">Backend web developer</h3>
+                </div>
+    
+                <div class="row text-center">
+                    <!-- Backend -->
+                    <div class="col-md-4 section-box backend-box">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-database fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Backend</h4>
+                        <img src="https://i.postimg.cc/Z5VvnNDJ/typescript.png" width="40px">Typescript
+                        <div class="side">
+                            <img src="https://i.postimg.cc/nrm2v2Q8/Database-copy-Amazon-Red-Shift-512.webp" width="60px">
+                            AWS RDS
+                            <img src="https://i.postimg.cc/CM9bjbN7/s3.png" width="60px"> AWS S3
+                        </div>
+                        <div class="side2">
                             <img src="https://i.postimg.cc/W3307nCW/My-SQL-512.webp" width="60px">MySQL
-                        <img src="https://i.postimg.cc/Z5H9DNr1/postgresql-icon.webp" width="50px">PostgreSQL
+                            <img src="https://i.postimg.cc/Z5H9DNr1/postgresql-icon.webp" width="50px">PostgreSQL
+                        </div>
+                    </div>
+    
+                    <!-- Frontend -->
+                    <div class="col-md-4 section-box frontend-box">
+                        <div data-aos="fade-down" data-aos-duration="1000">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <h4 class="my-3">Frontend</h4>
+                            <img src="https://i.postimg.cc/br5gnMv9/react-3.png" width="60px"> React <br>
+                            <img src="https://i.postimg.cc/XYd3D6dm/hssjs.png" width="85px"> HTML, CSS, Javascript
+                        </div>
+                    </div>
+    
+                    <!-- Tool -->
+                    <div class="col-md-4 section-box tool-box">
+                        <div data-aos="fade-down" data-aos-duration="1000">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <h4 class="my-3">Tool</h4>
+                            <img src="https://i.postimg.cc/mrhrX5ZH/github-512.webp" width="40px"> Github
+                            <div class="side">
+                                <img src="https://i.postimg.cc/rpWp2tWV/Slack-icon-2019-svg.png" width="40px"> Slack
+                                <img src="https://i.postimg.cc/k44htWc9/apps-jira-icon-2048x2048-u2czanhx.png" width="60px"> Jira
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-4 section-box frontend-box">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Frontend</h4>
-                    <img src="https://i.postimg.cc/br5gnMv9/react-3.png" width="60px"><p>React <br></p>
-                    <img src="https://i.postimg.cc/XYd3D6dm/hssjs.png" width="85xp">HTML, CSS, Javascript
-                </div>
-
-                <div class="col-md-4 section-box tool-box">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Tool</h4>
-                    <img src="https://i.postimg.cc/mrhrX5ZH/github-512.webp" width="40px">Github
-                    <div class="side">
-                    <img src="https://i.postimg.cc/rpWp2tWV/Slack-icon-2019-svg.png" width="40px">Slack
-                    <img src="https://i.postimg.cc/k44htWc9/apps-jira-icon-2048x2048-u2czanhx.png" width="60px">Jira
-                </div>
-                </div>
             </div>
-
         </div>
     </section>
+    
+
     <!-- Portfolio Grid-->
     <section class="page-section bg-light" id="portfolio">
         <div class="container">
+            <div data-aos="fade-down" data-aos-duration="1000">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Portfolio</h2>
             </div>
@@ -224,12 +239,16 @@
                             </div>
                         </div> -->
                 </div>
+
             </div>
         </div>
+    </div>
+
     </section>
     <!-- About-->
     <section class="page-section" id="about">
         <div class="container">
+            <div data-aos="fade-down" data-aos-duration="1000">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">WORK EXPERIENCES</h2>
                 <h3 class="section-subheading text-muted"> </h3>
@@ -314,6 +333,7 @@
                     </li> -->
             </ul>
         </div>
+    </div>
     </section>
     <!-- Team-->
 
@@ -614,9 +634,9 @@
     </div>
     <section class="page-section bg-light" id="team">
         <div class="container text-center">
+            <div data-aos="fade-down" data-aos-duration="1000">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">You can find me </h2>
-                <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-4">
@@ -624,7 +644,6 @@
                         <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..."
                             style="max-width: 150px; height: 170px;">
                         <h4> </h4>
-                        <!-- <p class="text-muted">contact details</p> -->
                         <a class="btn btn-dark btn-social mx-2" href="mailto:minsunkim167@gmail.com"
                             aria-label="Parveen Anand Twitter Profile"><i class="fa-regular fa-envelope"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="https://github.com/Minsun91"
@@ -635,7 +654,7 @@
                 </div>
             </div>
 
-
+        </div>
         </div>
 
     </section>
@@ -643,11 +662,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- * *                               SB Forms JS                               * *-->
-    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
