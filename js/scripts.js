@@ -2,32 +2,32 @@ window.addEventListener('DOMContentLoaded', event => {
     const cursor = document.querySelector(".mouse__cursor");
     const cursor2 = document.querySelector(".mouse__cursor2");
 
-    window.addEventListener("mousemove", (e) => {
-        // 커서 효과 적용
-        gsap.to(cursor, {
-            duration: 0.5,
-            left: e.pageX - cursor.clientWidth / 2,
-            top: e.pageY - cursor.clientHeight / 2,
-        });
+    // window.addEventListener("mousemove", (e) => {
+    //     // 커서 효과 적용
+    //     gsap.to(cursor, {
+    //         duration: 0.5,
+    //         left: e.pageX - cursor.clientWidth / 2,
+    //         top: e.pageY - cursor.clientHeight / 2,
+    //     });
     
-        gsap.to(cursor2, {
-            duration: 0.7,
-            left: e.pageX - cursor2.clientWidth / 2,
-            top: e.pageY - cursor2.clientHeight / 2,
-        });
-    });
+    //     gsap.to(cursor2, {
+    //         duration: 0.7,
+    //         left: e.pageX - cursor2.clientWidth / 2,
+    //         top: e.pageY - cursor2.clientHeight / 2,
+    //     });
+    // });
     
-    // 버튼 요소 제외한 부분에 대한 커서 효과 제거
-    document.querySelectorAll('.team-member .btn').forEach(button => {
-        button.addEventListener('mouseenter', () => {
-            cursor.style.display = 'none';
-            cursor2.style.display = 'none';
-        });
-        button.addEventListener('mouseleave', () => {
-            cursor.style.display = 'block';
-            cursor2.style.display = 'block';
-        });
-    });
+    // // 버튼 요소 제외한 부분에 대한 커서 효과 제거
+    // document.querySelectorAll('.team-member .btn').forEach(button => {
+    //     button.addEventListener('mouseenter', () => {
+    //         cursor.style.display = 'none';
+    //         cursor2.style.display = 'none';
+    //     });
+    //     button.addEventListener('mouseleave', () => {
+    //         cursor.style.display = 'block';
+    //         cursor2.style.display = 'block';
+    //     });
+    // });
     
 
     // Navbar shrink function
