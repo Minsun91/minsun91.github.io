@@ -86,4 +86,27 @@ window.addEventListener('DOMContentLoaded', event => {
         }
     }
     setInterval(typing, 200);
+    const videoThumbnail = document.getElementById('video-thumbnail');
+    videoThumbnail.addEventListener('click', playVideo);
+
+    function playVideo(videoId) {
+        var iframe = document.createElement('iframe');
+        iframe.setAttribute('width', '560');
+        iframe.setAttribute('height', '315');
+        iframe.setAttribute('src', 'https://www.youtube.com/embed/' + videoId + '?autoplay=1');
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allowfullscreen', '');
+    
+        var videoContainer = document.getElementById('video-container');
+        if (videoContainer) {
+            videoContainer.innerHTML = '';
+            videoContainer.appendChild(iframe);
+        } else {
+            console.error('Video container element not found.');
+        }
+    }
+    
+    playVideo('HyVOByhXejk'); 
+    playVideo('C5cSWuhuU1I'); 
+    playVideo('epmf5PkcXhjXnFZG');
 });
