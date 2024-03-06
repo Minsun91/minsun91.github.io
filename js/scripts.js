@@ -88,16 +88,15 @@ window.addEventListener('DOMContentLoaded', event => {
     setInterval(typing, 200);
     const videoThumbnail = document.getElementById('video-thumbnail');
     videoThumbnail.addEventListener('click', playVideo);
-
-    function playVideo(videoId) {
+    function playVideo(videoId, containerId) {
         var iframe = document.createElement('iframe');
         iframe.setAttribute('width', '560');
         iframe.setAttribute('height', '315');
-        iframe.setAttribute('src', 'https://www.youtube.com/embed/' + videoId + '?autoplay=1');
+        iframe.setAttribute('src', 'https://www.youtube.com/embed/' + videoId);
         iframe.setAttribute('frameborder', '0');
         iframe.setAttribute('allowfullscreen', '');
     
-        var videoContainer = document.getElementById('video-container');
+        var videoContainer = document.getElementById(containerId);
         if (videoContainer) {
             videoContainer.innerHTML = '';
             videoContainer.appendChild(iframe);
@@ -106,7 +105,15 @@ window.addEventListener('DOMContentLoaded', event => {
         }
     }
     
-    playVideo('HyVOByhXejk'); 
-    playVideo('C5cSWuhuU1I'); 
-    playVideo('epmf5PkcXhjXnFZG');
+    // 모달이 열릴 때 해당 비디오가 재생되도록 설정할 수 있습니다.
+    document.getElementById('portfolioModal1').addEventListener('shown.bs.modal', function () {
+        playVideo('HyVOByhXejk', 'video-container-1');
+    });
+
+    document.getElementById('portfolioModal3').addEventListener('shown.bs.modal', function () {
+        playVideo('WTkQ1k11nWM', 'video-container-3');
+    });
+    document.getElementById('portfolioModal4').addEventListener('shown.bs.modal', function () {
+        playVideo('C5cSWuhuU1I', 'video-container-4');
+    });
 });
