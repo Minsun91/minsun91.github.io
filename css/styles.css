@@ -11108,7 +11108,7 @@ header.masthead .masthead-heading {
   }
 }
 #portfolio .portfolio-item {
-  max-width: 26rem;
+  max-width: 23rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -11116,6 +11116,7 @@ header.masthead .masthead-heading {
   position: relative;
   display: block;
   margin: 0 auto;
+  background-color: white;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
   display: flex;
