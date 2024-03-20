@@ -118,7 +118,7 @@ body {
 .side2 {
     display: flex;
     align-items: center;
-}
+    color: beige;}
 
 .side img,
 .side2 img {
@@ -8278,7 +8278,8 @@ textarea.form-control-lg {
 
 .bg-light {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+  /* background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important; */
+  background-color: #212529;
 }
 
 .bg-dark {
@@ -11063,12 +11064,14 @@ p {
     margin-right: 0;
   }
 }
+
 header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 3rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/header-bg1.jpg");
+  background-color: #212529;
+  /* background-image: url("../assets/img/header-bg1.jpg"); */
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11133,12 +11136,12 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background-color: black;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  filter: blur(50px); /* 추가: 흐림 효과 */
+  filter: blur(70px); /* 추가: 흐림 효과 */
   z-index: -1;
 }
 
@@ -11148,12 +11151,21 @@ body {
 }
 
 .satellites {
-  border: 4px solid black;
+  border: 4px black;
   animation: rotate-axis 25s linear infinite;
   transform-style: preserve-3d;
   display: flex;
   justify-content: center;
   perspective: 800px; 
+}
+
+.satellites2 {
+  border: 4px black;
+  animation: rotate-axis 30s infinite;
+  transform-style: preserve-3d;
+  /* display: flex; */
+  justify-content: center;
+  perspective: 1000px; 
 }
 
 @keyframes rotate-axis {
@@ -11180,16 +11192,26 @@ body {
   transform: rotateY(calc(var(--i) * -20deg)) translateZ(500px);
 }
 
+.satellite2:nth-child(odd) {
+  transform: rotateY(calc(var(--i) * 40deg)) translateZ(600px);
+}
+
+.satellite2:nth-child(even) {
+  transform: rotateY(calc(var(--i) * -30deg)) translateZ(600px);
+}
+
 #portfolio .portfolio-item {
   max-width: 23rem;
   margin-left: auto;
   margin-right: auto;
+  background-color: #212529;
 }
 #portfolio .portfolio-item .portfolio-link {
   position: relative;
   display: block;
   margin: 0 auto;
   background-color: white;
+  background-color: #212529;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
   display: flex;
@@ -11201,24 +11223,29 @@ body {
   justify-content: center;
   opacity: 0;
   transition: opacity ease-in-out 0.25s;
+  background-color: #212529;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
   font-size: 1.25rem;
   color: white;
+  background-color: #212529;
 }
 #portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
   opacity: 1;
+  background-color: #212529;
 }
 #portfolio .portfolio-item .portfolio-caption {
   padding: 1.5rem;
   text-align: center;
   background-color: #fff;
+  background-color: #212529;
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
   font-size: 1.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   margin-bottom: 0;
+  background-color: #212529;
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
   font-style: italic;
