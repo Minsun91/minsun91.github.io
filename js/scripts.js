@@ -87,39 +87,39 @@ window.addEventListener('DOMContentLoaded', event => {
     }
     setInterval(typing, 200);
 
-     // Lenis 스크롤 효과 추가
-     const lenis = new Lenis({
-        wrapper: document.querySelector('.wrapper'),
-        content: document.querySelector('.inner-wrapper'),
-    });
+    //  // Lenis 스크롤 효과 추가
+    //  const lenis = new Lenis({
+    //     wrapper: document.querySelector('.wrapper'),
+    //     content: document.querySelector('.inner-wrapper'),
+    // });
 
-    lenis.on('scroll', ScrollTrigger.update);
+    // lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.add(time => {
-        lenis.raf(time * 1000);
-    });
+    // gsap.ticker.add(time => {
+    //     lenis.raf(time * 1000);
+    // });
 
-    gsap.ticker.lagSmoothing(0);
+    // gsap.ticker.lagSmoothing(0);
 
-    document.querySelector('html').style.cssText = `
-        bottom: 0;
-        left: 0;
-        overflow: hidden;
-        position: fixed;
-        right: 0;
-        top: 0;
-    `;
+    // document.querySelector('html').style.cssText = `
+    //     bottom: 0;
+    //     left: 0;
+    //     overflow: hidden;
+    //     position: fixed;
+    //     right: 0;
+    //     top: 0;
+    // `;
     
-    document.querySelector('.wrapper').style.cssText = `
-        bottom: 0;
-        left: 0;
-        position: fixed;
-        right: 0;
-        top: 0;
-        overflow: hidden;
-        overflow-y: auto;
-        width: 100%;
-    `;
+    // document.querySelector('.wrapper').style.cssText = `
+    //     bottom: 0;
+    //     left: 0;
+    //     position: fixed;
+    //     right: 0;
+    //     top: 0;
+    //     overflow: hidden;
+    //     overflow-y: auto;
+    //     width: 100%;
+    // `;
     
     //비디오 재생 관련
     const videoThumbnail = document.getElementById('video-thumbnail');
