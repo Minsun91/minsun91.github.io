@@ -10975,11 +10975,11 @@ p {
   margin-bottom: 4rem;
 }
 
-@media (min-width: 768px) {
-  /* section {
+/* @media (min-width: 768px) {
+  section {
     padding: 9rem 0;
-  } */
-}
+  }
+} */
 .btn-xl {
   padding: 1.25rem 2.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -11097,7 +11097,7 @@ header.masthead .masthead-heading {
     padding-bottom: 12.5rem;
   } */
   header.masthead .masthead-subheading {
-    font-size: 2.25rem;`
+    font-size: 2.25rem;
     font-style: italic;
     line-height: 2.25rem;
     margin-bottom: 2rem;
@@ -11126,6 +11126,7 @@ body {
   position: relative;
   overflow: hidden;
   perspective: none;
+  -webkit-perspective: none; /* Safari */
 }
 
 .masthead:before {
@@ -11155,7 +11156,8 @@ body {
   transform-style: preserve-3d;
   display: flex;
   justify-content: center;
-  /* perspective: 800px;  */
+  perspective: none; /* 표준 */
+  -webkit-perspective: none; /* Safari */
 }
 
 .satellites2 {
@@ -11164,17 +11166,9 @@ body {
   transform-style: preserve-3d;
   display: flex;
   justify-content: center;
-  /* perspective: 1000px;  */
+  perspective: none; /* 표준 */
+  -webkit-perspective: none; /* Safari */
 }
-
-/* @keyframes rotate-axis {
-  from {
-      transform: rotateZ(350deg) perspective(800px) rotateY(0deg);
-  }
-  to {
-      transform: rotateZ(350deg) perspective(800px) rotateY(360deg);
-  }
-} */
 
 @keyframes rotate-axis {
   from {
