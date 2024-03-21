@@ -116,7 +116,7 @@ body {
 
 .side,
 .side2 {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     color: beige;}
 
@@ -10959,9 +10959,9 @@ p {
   line-height: 1.75;
 }
 
-.page-section {
+/* .page-section {
   padding: 6rem 0;
-}
+} */
 .page-section h2.section-heading, .page-section .section-heading.h2 {
   font-size: 2.5rem;
   margin-top: 0;
@@ -10976,9 +10976,9 @@ p {
 }
 
 @media (min-width: 768px) {
-  section {
+  /* section {
     padding: 9rem 0;
-  }
+  } */
 }
 .btn-xl {
   padding: 1.25rem 2.5rem;
@@ -11066,12 +11066,11 @@ p {
 }
 
 header.masthead {
-  padding-top: 10.5rem;
+  /* padding-top: 10.5rem; */
   padding-bottom: 3rem;
   text-align: center;
   color: #fff;
   background-color: #212529;
-  /* background-image: url("../assets/img/header-bg1.jpg"); */
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11093,12 +11092,12 @@ header.masthead .masthead-heading {
 }
 
 @media (min-width: 768px) {
-  header.masthead {
+  /* header.masthead {
     padding-top: 17rem;
     padding-bottom: 12.5rem;
-  }
+  } */
   header.masthead .masthead-subheading {
-    font-size: 2.25rem;
+    font-size: 2.25rem;`
     font-style: italic;
     line-height: 2.25rem;
     margin-bottom: 2rem;
@@ -11126,12 +11125,12 @@ body {
   color: #fff;
   position: relative;
   overflow: hidden;
-  perspective: 1000px; /* 추가: 원근감 설정 */
+  perspective: none;
 }
 
 .masthead:before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: -50%;
   left: -50%;
   width: 200%;
@@ -11141,7 +11140,7 @@ body {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  filter: blur(70px); /* 추가: 흐림 효과 */
+  filter: blur(70px);
   z-index: -1;
 }
 
@@ -11156,24 +11155,33 @@ body {
   transform-style: preserve-3d;
   display: flex;
   justify-content: center;
-  perspective: 800px; 
+  /* perspective: 800px;  */
 }
 
 .satellites2 {
   border: 4px black;
-  animation: rotate-axis 30s infinite;
+  animation: rotate-axis 30s linear infinite;
   transform-style: preserve-3d;
   display: flex;
   justify-content: center;
-  perspective: 1000px; 
+  /* perspective: 1000px;  */
 }
 
-@keyframes rotate-axis {
+/* @keyframes rotate-axis {
   from {
       transform: rotateZ(350deg) perspective(800px) rotateY(0deg);
   }
   to {
       transform: rotateZ(350deg) perspective(800px) rotateY(360deg);
+  }
+} */
+
+@keyframes rotate-axis {
+  from {
+    transform: rotateZ(350deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateZ(350deg) rotateY(360deg);
   }
 }
 
