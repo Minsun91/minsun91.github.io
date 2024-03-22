@@ -5484,6 +5484,7 @@ textarea.form-control-lg {
   position: relative;
   flex: 1 1 auto;
   padding: var(--bs-modal-padding);
+  color:#212529;
 }
 
 .modal-footer {
