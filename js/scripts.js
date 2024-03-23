@@ -1,26 +1,25 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-    const cursor = document.querySelector(".mouse__cursor");
-    const cursor2 = document.querySelector(".mouse__cursor2");
 
-// preloader를 표시하는 부분
-document.addEventListener("DOMContentLoaded", function () {
-    var preloader = document.querySelector(".loader");
-    preloader.style.display = "block";
+    fetch('preloader.html')
+    .then(response => response.text())
+    .then(html => {
+        // Add preloader HTML content to the document
+        document.body.insertAdjacentHTML('afterbegin', html);
 
-    // 2초 후 preloader를 숨기는 코드
-    setTimeout(function () {
-        preloader.style.display = "none";
-    }, 2000); // 2초 설정
-});
+        // show preloader
+        var preloader = document.querySelector(".loader");
+        preloader.style.display = "block";
 
-// 페이지 로딩이 완료된 후 preloader를 숨기는 부분
-window.addEventListener("load", function () {
-    var preloader = document.querySelector(".loader");
-    preloader.style.display = "none";
-});
+        // hide preloader after 5 seconds
+        setTimeout(() => {
+            preloader.style.display = "none";
+        }, 5000);
+    })
+    .catch(error => console.error('Error loading preloader:', error));
 
+// const cursor = document.querySelector(".mouse__cursor");
+// const cursor2 = document.querySelector(".mouse__cursor2");
     // window.addEventListener("mousemove", (e) => {
-    //     // 커서 효과 적용
     //     gsap.to(cursor, {
     //         duration: 0.5,
     //         left: e.pageX - cursor.clientWidth / 2,
@@ -47,6 +46,7 @@ window.addEventListener("load", function () {
     // });
 
     // Navbar shrink function
+    
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector("#mainNav");
         if (!navbarCollapsible) {
@@ -87,7 +87,7 @@ window.addEventListener("load", function () {
         });
     });
 
-    // 타이핑 효과 추가
+    // Typing effect
     const content = "Hi 😊 I'm Minsun";
     const text = document.querySelector(".text");
     let i = 0;
@@ -102,39 +102,39 @@ window.addEventListener("load", function () {
     }
     setInterval(typing, 200);
 
-    //  // Lenis 스크롤 효과 추가
-    //  const lenis = new Lenis({
-    //     wrapper: document.querySelector('.wrapper'),
-    //     content: document.querySelector('.inner-wrapper'),
-    // });
+     // Lenis 스크롤 효과 추가
+     const lenis = new Lenis({
+        wrapper: document.querySelector('.wrapper'),
+        content: document.querySelector('.inner-wrapper'),
+    });
 
-    // lenis.on('scroll', ScrollTrigger.update);
+    lenis.on('scroll', ScrollTrigger.update);
 
-    // gsap.ticker.add(time => {
-    //     lenis.raf(time * 1000);
-    // });
+    gsap.ticker.add(time => {
+        lenis.raf(time * 1000);
+    });
 
-    // gsap.ticker.lagSmoothing(0);
+    gsap.ticker.lagSmoothing(0);
 
-    // document.querySelector('html').style.cssText = `
-    //     bottom: 0;
-    //     left: 0;
-    //     overflow: hidden;
-    //     position: fixed;
-    //     right: 0;
-    //     top: 0;
-    // `;
+    document.querySelector('html').style.cssText = `
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        position: fixed;
+        right: 0;
+        top: 0;
+    `;
 
-    // document.querySelector('.wrapper').style.cssText = `
-    //     bottom: 0;
-    //     left: 0;
-    //     position: fixed;
-    //     right: 0;
-    //     top: 0;
-    //     overflow: hidden;
-    //     overflow-y: auto;
-    //     width: 100%;
-    // `;
+    document.querySelector('.wrapper').style.cssText = `
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        overflow: hidden;
+        overflow-y: auto;
+        width: 100%;
+    `;
 
     //비디오 재생 관련
     const videoThumbnail = document.getElementById("video-thumbnail");
@@ -156,7 +156,7 @@ window.addEventListener("load", function () {
         }
     }
 
-    // 모달이 열릴 때 해당 비디오가 재생되도록 설정할 수 있습니다.
+    //video
     document
         .getElementById("portfolioModal1")
         .addEventListener("shown.bs.modal", function () {
