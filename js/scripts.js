@@ -1,22 +1,4 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-
-    fetch('preloader.html')
-    .then(response => response.text())
-    .then(html => {
-        // Add preloader HTML content to the document
-        document.body.insertAdjacentHTML('afterbegin', html);
-
-        // show preloader
-        var preloader = document.querySelector(".loader");
-        preloader.style.display = "block";
-
-        // hide preloader after 5 seconds
-        setTimeout(() => {
-            preloader.style.display = "none";
-        }, 5000);
-    })
-    .catch(error => console.error('Error loading preloader:', error));
-
 // const cursor = document.querySelector(".mouse__cursor");
 // const cursor2 = document.querySelector(".mouse__cursor2");
     // window.addEventListener("mousemove", (e) => {
