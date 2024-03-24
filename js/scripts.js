@@ -70,7 +70,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
 
     // Typing effect
-    const content = "Hi 😊 I'm Minsun";
+    const content = "MINSUN KIM";
     const text = document.querySelector(".text");
     let i = 0;
 
@@ -82,7 +82,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             i = 0;
         }
     }
-    setInterval(typing, 200);
+    setInterval(typing, 500);
 
     //비디오 재생 관련
     const videoThumbnail = document.getElementById('video-thumbnail');
