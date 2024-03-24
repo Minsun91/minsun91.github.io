@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-// const cursor = document.querySelector(".mouse__cursor");
-// const cursor2 = document.querySelector(".mouse__cursor2");
+    // const cursor = document.querySelector(".mouse__cursor");
+    // const cursor2 = document.querySelector(".mouse__cursor2");
     // window.addEventListener("mousemove", (e) => {
     //     gsap.to(cursor, {
     //         duration: 0.5,
@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // });
 
     // Navbar shrink function
-    
+
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector("#mainNav");
         if (!navbarCollapsible) {
@@ -84,75 +84,36 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
     setInterval(typing, 200);
 
-     // Lenis 스크롤 효과 추가
-     const lenis = new Lenis({
-        wrapper: document.querySelector('.wrapper'),
-        content: document.querySelector('.inner-wrapper'),
-    });
-
-    lenis.on('scroll', ScrollTrigger.update);
-
-    gsap.ticker.add(time => {
-        lenis.raf(time * 1000);
-    });
-
-    gsap.ticker.lagSmoothing(0);
-
-    document.querySelector('html').style.cssText = `
-        bottom: 0;
-        left: 0;
-        overflow: hidden;
-        position: fixed;
-        right: 0;
-        top: 0;
-    `;
-
-    document.querySelector('.wrapper').style.cssText = `
-        bottom: 0;
-        left: 0;
-        position: fixed;
-        right: 0;
-        top: 0;
-        overflow: hidden;
-        overflow-y: auto;
-        width: 100%;
-    `;
-
     //비디오 재생 관련
-    const videoThumbnail = document.getElementById("video-thumbnail");
-    videoThumbnail.addEventListener("click", playVideo);
+    const videoThumbnail = document.getElementById('video-thumbnail');
+    videoThumbnail.addEventListener('click', playVideo);
     function playVideo(videoId, containerId) {
-        var iframe = document.createElement("iframe");
-        iframe.setAttribute("width", "560");
-        iframe.setAttribute("height", "315");
-        iframe.setAttribute("src", "https://www.youtube.com/embed/" + videoId);
-        iframe.setAttribute("frameborder", "0");
-        iframe.setAttribute("allowfullscreen", "");
+        var iframe = document.createElement('iframe');
+        iframe.setAttribute('width', '560');
+        iframe.setAttribute('height', '315');
+        iframe.setAttribute('src', 'https://www.youtube.com/embed/' + videoId);
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allowfullscreen', '');
 
+        var videoContainer = document.getElementById('video-container');
         var videoContainer = document.getElementById(containerId);
         if (videoContainer) {
-            videoContainer.innerHTML = "";
+            videoContainer.innerHTML = '';
             videoContainer.appendChild(iframe);
         } else {
-            console.error("Video container element not found.");
+            console.error('Video container element not found.');
         }
     }
 
-    //video
-    document
-        .getElementById("portfolioModal1")
-        .addEventListener("shown.bs.modal", function () {
-            playVideo("HyVOByhXejk", "video-container-1");
-        });
+    // 모달이 열릴 때 해당 비디오가 재생되도록 설정할 수 있습니다.
+    document.getElementById('portfolioModal1').addEventListener('shown.bs.modal', function () {
+        playVideo('HyVOByhXejk', 'video-container-1');
+    });
 
-    document
-        .getElementById("portfolioModal3")
-        .addEventListener("shown.bs.modal", function () {
-            playVideo("WTkQ1k11nWM", "video-container-3");
-        });
-    document
-        .getElementById("portfolioModal4")
-        .addEventListener("shown.bs.modal", function () {
-            playVideo("C5cSWuhuU1I", "video-container-4");
-        });
+    document.getElementById('portfolioModal3').addEventListener('shown.bs.modal', function () {
+        playVideo('WTkQ1k11nWM', 'video-container-3');
+    });
+    document.getElementById('portfolioModal4').addEventListener('shown.bs.modal', function () {
+        playVideo('C5cSWuhuU1I', 'video-container-4');
+    });
 });
