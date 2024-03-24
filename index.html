@@ -19,6 +19,12 @@
     <script src="node_modules/@studio-freight/lenis/dist/lenis.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@0.2.27/src/lenis.js"></script> -->
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
@@ -191,6 +197,7 @@
 
     <!-- Portfolio Grid-->
     <header class="masthead">
+
         <section class="page-section bg-light" id="portfolio" style="background-color: #212529;">
             <div class="container">
                 <div class="satellites2">
@@ -211,132 +218,111 @@
                     <img class="satellite" style="--i: 160; top: 0px" src="https://cdn.simpleicons.org/docker">
                 </div>
 
-                //portfolio 시작
+                <!--portfolio 시작 -->
                 <div data-aos="fade-down" data-aos-duration="1000">
                     <div class="text-center">
                         <h2 class="section-heading text-uppercase" style="color: beige;">Portfolio</h2>
                     </div>
 
-                    <div class="row">
-                        <!-- Portfolio item 1-->
+                    <div class="swiper-container" style="display: flex; justify-content: center;">
+                        <div class="swiper-wrapper" style="display: flex;">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="portfolio-item">
+                                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                        </div>
+                                        <div style="text-align:center;">
+                                            <img class="img-fluid" src="assets/img/portfolio/1.png" alt="..."
+                                                style="width:368px; height:200px" />
+                                        </div>
+                                    </a>
+                                    <div class="portfolio-caption">
+                                        <div class="portfolio-caption-heading" style="color: beige;">Spiritory
+                                        </div>
+                                        <div class="portfolio-caption-subheading text-muted">Trading platform
+                                            for whiskies,
+                                            enabling easy trading, investment, and collection.</div>
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
 
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="portfolio-item">
-                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                                    <!-- href="https://www.notion.so/minsunportfolio/Spiritory-065c043bf6e6476ca9675274d45c305f?pvs=4"> -->
-                                    <div class="portfolio-hover">
-                                        <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                    </div>
-                                    <div style="text-align:center;">
-                                        <img class="img-fluid" src="assets/img/portfolio/1.png" alt="..."
-                                            style="width:368px; height:200px" />
-                                    </div>
-                                </a>
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading" style="color: beige;">Spiritory</div>
-                                    <div class="portfolio-caption-subheading text-muted">Trading platform for whiskies,
-                                        enabling easy trading, investment, and collection.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Portfolio item 2-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="portfolio-item"
-                                style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                                    <!-- href="https://minsunportfolio.notion.site/BookMinsoonNow-f122b0d50c0947198ddf76c3522105e4"> -->
-                                    <div class="portfolio-hover">
-                                        <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                    </div>
-                                    <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..."
-                                        style="width:368px; height:200px;" />
-                                </a>
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading" style="color: beige;">BookMinsoonNow</div>
-                                    <div class="portfolio-caption-subheading text-muted">A reservation site for my
-                                        friends
-                                        who are afraid of rejecting invitations</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Portfolio item 3-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="portfolio-item"
-                                style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                                    <!-- href="https://minsunportfolio.notion.site/CLIPs-Best-Project-award-ed77c8d575174eada0880842fb86cd29"> -->
-                                    <div class="portfolio-hover">
-                                        <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                    </div>
-                                    <img class="img-fluid" src="assets/img/portfolio/2.png" alt="..."
-                                        style="width:365px; height:200px;" />
-                                </a>
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading" style="color: beige;">CLIPS</div>
-                                    <div class="portfolio-caption-subheading text-muted">Application for managing
-                                        appointments and recommending places around users</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Portfolio item 4-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="portfolio-item">
-                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                                    <!-- href="https://minsunportfolio.notion.site/Tindater-5c072580e18443f7918d7ac6d3113a8e"> -->
-                                    <div class="portfolio-hover">
-                                        <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                    </div>
-                                    <div style="text-align:center;">
-                                        <img class="img-fluid" src="assets/img/portfolio/3.png" alt="..."
+                            <div class="swiper-slide">
+                                <!-- <div class="col-lg-4 col-md-6 mb-4"> -->
+                                <div class="portfolio-item"
+                                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                        <!-- href="https://minsunportfolio.notion.site/BookMinsoonNow-f122b0d50c0947198ddf76c3522105e4"> -->
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                        </div>
+                                        <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..."
                                             style="width:368px; height:200px;" />
-                                    </div>
-                                </a>
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading" style="color: beige;">Tindater</div>
-                                    <div class="portfolio-caption-subheading text-muted">Clone of the dating app Tinder
+                                    </a>
+                                    <div class="portfolio-caption">
+                                        <div class="portfolio-caption-heading" style="color: beige;">
+                                            BookMinsoonNow</div>
+                                        <div class="portfolio-caption-subheading text-muted">A reservation site
+                                            for my
+                                            friends
+                                            who are afraid of rejecting invitations</div>
                                     </div>
                                 </div>
+                                <!-- </div> -->
                             </div>
-                        </div>
-                        <!-- Portfolio item 5-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="portfolio-item">
-                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                                    <div class="portfolio-hover">
-                                        <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                    </div>
-                                    <div style="text-align:center;">
-                                        <img class="img-fluid" src="assets/img/portfolio/4.png" alt="..."
-                                            style="width:80%; height:200px; display: block; margin: 0 auto;" />
-                                    </div>
-                                </a>
 
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading" style="color: beige;">Tikkle</div>
-                                    <div class="portfolio-caption-subheading text-muted">Travel Photo Album with React
+                            <div class="swiper-slide">
+                                <!-- <div class="col-lg-4 col-md-6 mb-4"> -->
+                                <div class="portfolio-item"
+                                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                        <!-- href="https://minsunportfolio.notion.site/CLIPs-Best-Project-award-ed77c8d575174eada0880842fb86cd29"> -->
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                        </div>
+                                        <img class="img-fluid" src="assets/img/portfolio/2.png" alt="..."
+                                            style="width:365px; height:200px;" />
+                                    </a>
+                                    <div class="portfolio-caption">
+                                        <div class="portfolio-caption-heading" style="color: beige;">CLIPS</div>
+                                        <div class="portfolio-caption-subheading text-muted">Application for
+                                            managing
+                                            appointments and recommending places around users</div>
                                     </div>
                                 </div>
+                                <!-- </div> -->
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <!-- Portfolio item 6-->
-                            <!-- <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Tikkle</div>
-                                <div class="portfolio-caption-subheading text-muted">Photo Album</div>
-                            </div>
-                        </div> -->
-                        </div>
 
+                            <div class="swiper-slide">
+                                <!-- <div class="col-lg-4 col-md-6 mb-4"> -->
+                                <div class="portfolio-item">
+                                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                        <!-- href="https://minsunportfolio.notion.site/Tindater-5c072580e18443f7918d7ac6d3113a8e"> -->
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i>
+                                            </div>
+                                        </div>
+                                        <div style="text-align:center;">
+                                            <img class="img-fluid" src="assets/img/portfolio/3.png" alt="..."
+                                                style="width:368px; height:200px;" />
+                                        </div>
+                                    </a>
+                                    <div class="portfolio-caption">
+                                        <div class="portfolio-caption-heading" style="color: beige;">Tindater
+                                        </div>
+                                        <div class="portfolio-caption-subheading text-muted">Clone of the dating
+                                            app Tinder
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                       
                     </div>
                 </div>
-            
             </div>
         </section>
     </header>
@@ -489,12 +475,12 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Spiritory</h2>
                                     <p class="item-intro text-muted">First whiskey trading trading platform.</p>
-                                 
+
                                     <div id="video-container-1">
                                         <img id="video-thumbnail" src="https://www.youtube.com/watch?v=HyVOByhXejk"
                                             alt="Video Thumbnail">
                                     </div>
-                                    
+
                                     <div>
                                         <p>
                                             As a backend developer at my inaugural position, I contributed to the
