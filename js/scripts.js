@@ -35,6 +35,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     
         loader.style.display = 'none';
         content.style.display = 'block';
+
     });
 
 
@@ -81,9 +82,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // Typing effect
     const content = "MINSUN KIM";
 const text = document.querySelector(".text");
-
 let i = 0;
-
 function typing() {
     text.textContent += content[i++];
     if (i >= content.length) {
