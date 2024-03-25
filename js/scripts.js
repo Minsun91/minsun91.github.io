@@ -29,6 +29,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     // Navbar shrink function
 
+    window.addEventListener('load', function(){
+        const loader = document.querySelector('.preloader');
+        const content = document.querySelector('.content');
+    
+        loader.style.display = 'none';
+        content.style.display = 'block';
+    });
+
+
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector("#mainNav");
         if (!navbarCollapsible) {
@@ -71,18 +80,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     // Typing effect
     const content = "MINSUN KIM";
-    const text = document.querySelector(".text");
-    let i = 0;
+const text = document.querySelector(".text");
 
-    function typing() {
-        let txt = content[i++];
-        text.innerHTML += txt === "\n" ? "<br/>" : txt;
-        if (i > content.length) {
-            text.textContent = "";
-            i = 0;
-        }
+let i = 0;
+
+function typing() {
+    text.textContent += content[i++];
+    if (i >= content.length) {
+        clearInterval(intervalId);
     }
-    setInterval(typing, 500);
+}
+
+const intervalId = setInterval(typing, 500);
+
 
     //비디오 재생 관련
     const videoThumbnail = document.getElementById('video-thumbnail');
