@@ -1,43 +1,31 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-    // const cursor = document.querySelector(".mouse__cursor");
-    // const cursor2 = document.querySelector(".mouse__cursor2");
-    // window.addEventListener("mousemove", (e) => {
-    //     gsap.to(cursor, {
-    //         duration: 0.5,
-    //         left: e.pageX - cursor.clientWidth / 2,
-    //         top: e.pageY - cursor.clientHeight / 2,
-    //     });
-
-    //     gsap.to(cursor2, {
-    //         duration: 0.7,
-    //         left: e.pageX - cursor2.clientWidth / 2,
-    //         top: e.pageY - cursor2.clientHeight / 2,
-    //     });
-    // });
-
-    // // 버튼 요소 제외한 부분에 대한 커서 효과 제거
-    // document.querySelectorAll('.team-member .btn').forEach(button => {
-    //     button.addEventListener('mouseenter', () => {
-    //         cursor.style.display = 'none';
-    //         cursor2.style.display = 'none';
-    //     });
-    //     button.addEventListener('mouseleave', () => {
-    //         cursor.style.display = 'block';
-    //         cursor2.style.display = 'block';
-    //     });
-    // });
-
-    // Navbar shrink function
-
-    window.addEventListener('load', function(){
-        const loader = document.querySelector('.preloader');
-        const content = document.querySelector('.content');
+    // window.addEventListener('load', function(){
+    //     const loader = document.querySelector('.preloader');
+    //     const content = document.querySelector('.content');
     
-        loader.style.display = 'none';
-        content.style.display = 'block';
+    //     loader.style.display = 'none';
+    //     content.style.display = 'block';
 
-    });
+    // });
 
+
+window.addEventListener("DOMContentLoaded", (event) => {
+    fetch('preloader.html')
+        .then(response => response.text()) 
+        .then(html => {
+            // HTML 문자열을 DOM 요소로 변환합니다.
+            const div = document.createElement('div');
+            div.innerHTML = html;
+            const preloader = div.firstElementChild;
+
+            // 현재 문서의 body에 preloader를 추가합니다.
+            document.body.insertBefore(preloader, document.body.firstChild);
+
+            // 페이지가 완전히 로드되면 preloader를 숨깁니다.
+            window.addEventListener('load', function() {
+                preloader.style.display = 'none';
+            });
+        });
 
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector("#mainNav");
@@ -161,6 +149,5 @@ const intervalId = setInterval(typing, 500);
         el: '.swiper-pagination',
         clickable: true,
     },
-});
-
-});
+});})
+})
