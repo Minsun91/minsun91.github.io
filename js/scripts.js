@@ -1,13 +1,31 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-    window.addEventListener('load', function(){
-        const loader = document.querySelector('.preloader');
-        const content = document.querySelector('.content');
+    // window.addEventListener('load', function(){
+    //     const loader = document.querySelector('.preloader');
+    //     const content = document.querySelector('.content');
     
-        loader.style.display = 'none';
-        content.style.display = 'block';
+    //     loader.style.display = 'none';
+    //     content.style.display = 'block';
 
-    });
+    // });
 
+
+window.addEventListener("DOMContentLoaded", (event) => {
+    fetch('preloader.html')
+        .then(response => response.text()) 
+        .then(html => {
+            // HTML 문자열을 DOM 요소로 변환합니다.
+            const div = document.createElement('div');
+            div.innerHTML = html;
+            const preloader = div.firstElementChild;
+
+            // 현재 문서의 body에 preloader를 추가합니다.
+            document.body.insertBefore(preloader, document.body.firstChild);
+
+            // 페이지가 완전히 로드되면 preloader를 숨깁니다.
+            window.addEventListener('load', function() {
+                preloader.style.display = 'none';
+            });
+        });
 
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector("#mainNav");
@@ -131,6 +149,5 @@ const intervalId = setInterval(typing, 500);
         el: '.swiper-pagination',
         clickable: true,
     },
-});
-
-});
+});})
+})
