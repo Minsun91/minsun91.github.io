@@ -150,4 +150,62 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 clickable: true,
             },
         })
+
+//image preload
+function preloadAndLazyLoadImages() {
+    const imageSources = [
+        "./assets/img/team/1.jpg",
+        "./assets/img/portfolio/1.png",
+        "./assets/img/portfolio/2.png",
+        "./assets/img/portfolio/3.png",
+        "./assets/img/portfolio/4.png",
+        "./assets/img/portfolio/5.jpg",
+        "https://i.postimg.cc/Z5VvnNDJ/typescript.png",
+        "https://i.postimg.cc/nrm2v2Q8/Database-copy-Amazon-Red-Shift-512.webp",
+        "https://i.postimg.cc/CM9bjbN7/s3.png",
+        "https://i.postimg.cc/W3307nCW/My-SQL-512.webp",
+        "https://i.postimg.cc/Z5H9DNr1/postgresql-icon.webp",
+        "https://i.postimg.cc/ZKmtKQBW/strapi-icon-512x505-3hl7a1v3.png",
+        "https://i.postimg.cc/br5gnMv9/react-3.png",
+        "https://i.postimg.cc/XYd3D6dm/hssjs.png",
+        "https://i.postimg.cc/KvKwbqKB/1000-F-250305943-s-DC6la1-N1f-Dl3b-Lgf-Lx-Ok-Qw-It-Iodsd-Mb.jpg",
+        "https://i.postimg.cc/rpWp2tWV/Slack-icon-2019-svg.png",
+        "https://i.postimg.cc/k44htWc9/apps-jira-icon-2048x2048-u2czanhx.png"
+    ];
+
+    imageSources.forEach(function(imageSrc) {
+        let img = new Image();
+        img.src = imageSrc;
     });
+
+    window.addEventListener('scroll', lazyLoadImages);
+    lazyLoadImages(); // 초기 로딩 시 이미지 preload
+}
+
+// lazy loading을 위한 함수
+function lazyLoadImages() {
+    const images = document.querySelectorAll('img[data-src]');
+    
+    images.forEach(function(img) {
+        if (isElementInViewport(img)) {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+        }
+    });
+}
+
+// 요소가 뷰포트 안에 있는지 확인하는 함수
+function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// 페이지 로드 시 이미지 preload 및 lazy loading을 수행
+document.addEventListener('DOMContentLoaded', preloadAndLazyLoadImages);
+
+});
