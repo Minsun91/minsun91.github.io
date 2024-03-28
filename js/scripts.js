@@ -150,4 +150,36 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 clickable: true,
             },
         })
+
+//image preload
+let images = [];
+
+function preload() {
+  for(let i = 0; i < preload.arguments.lenght; i++) {
+    images[i] = new Image();
+    images[i].src = preload.arguments.src;
+  }
+}
+
+preload(
+  "./assets/img/team/1.jpg",
+  "./assets/img/portfolio/1.png",
+  "./assets/img/portfolio/2.png",
+  "./assets/img/portfolio/3.png",
+  "./assets/img/portfolio/4.png",
+  "./assets/img/portfolio/5.jpg"
+)
+
+// preload된 이미지를 화면에 표시
+window.onload = function() {
+    let imageContainer = document.getElementById('image-container');
+
+    // 이미지 추가
+    images.forEach(function(imgSrc) {
+        let imgElement = document.createElement('img');
+        imgElement.src = imgSrc;
+        imageContainer.appendChild(imgElement);
     });
+};
+
+});
