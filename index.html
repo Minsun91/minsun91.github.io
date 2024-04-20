@@ -36,7 +36,7 @@
 <body id="page-top">
     
     <div id="image-container"></div>
-
+    <script id="dsq-count-scr" src="//minsunportfolio.disqus.com/count.js" async></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
@@ -832,6 +832,17 @@
                         </div>
                     </div>
 
+<!-- 댓글 -->
+                    <div id="disqus_thread" class="row justify-content-center"></div>
+                    <script>
+                        (function () {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://minsunportfolio.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                 <!-- </div> -->
             </div>
 
