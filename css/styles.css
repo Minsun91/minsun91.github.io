@@ -224,7 +224,7 @@ hr {
   opacity: 0.25;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1{
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -232,9 +232,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   line-height: 1.2;
 }
 
-h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
-}
 @media (min-width: 992px) {
   h1, .h1 {
     font-size: 2.5rem;
@@ -11066,9 +11063,40 @@ p {
   }
 }
 
+/* 사진 */
+@keyframes slideInFromRight {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideInFromRight 1s ease;
+}
+
+/* 스크롤 */
+.btn-motion5 span {position: absolute;top: 0;left: 50%;width: 24px;height: 24px;margin-left: -12px;border-left: 1px solid beige;border-bottom: 1px solid beige;transform: rotate(-45deg);animation: btn-motion5 1.5s infinite;box-sizing: border-box;}
+
+@keyframes btn-motion5 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
 header.masthead {
   /* padding-top: 10.5rem; */
-  padding-left: 50px;
+  /* padding-left: 50px; */
   padding-bottom: 3rem;
   text-align: left;
   color: #fff;
@@ -11085,6 +11113,7 @@ header.masthead .masthead-subheading {
   margin-bottom: 15px;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
 header.masthead .masthead-heading {
   font-size: 3.25rem;
   font-weight: 700;
@@ -11095,8 +11124,8 @@ header.masthead .masthead-heading {
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 17rem;
-    padding-bottom: 12.5rem;
+    padding-top: 10rem;
+    /* padding-bottom: 12.5rem; */
   }
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
@@ -11121,7 +11150,7 @@ body {
 }
 
 .masthead {
-  padding-top: 10.5rem;
+  /* padding-top: 10.5rem; */
   padding-bottom: 3rem;
   color: #fff;
   position: relative;
@@ -11148,54 +11177,8 @@ body {
 
 .text-container {
   position: relative;
-  width:300px;
+  /* width:300px; */
   z-index: 999;
-}
-
-.satellites-container {
-width:800px;
-  height:650px;
-  margin-top: 30px;
-  border: 4px black;
-  animation: rotate-axis 70s linear infinite;
-  transform-style: preserve-3d;
-  display: flex;
-  justify-content: center;
-  perspective: none; /* 표준 */
-  -webkit-perspective: none; /* Safari */
-    position: relative;
-    filter: blur(1px);
-}
-
-.satellites { 
-  top:50px;
-  margin-top: 100px;
-  width: 50px;
-  /* display: flex; */
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transform-style: preserve-3d;
-  transform: rotateY(calc(var(--i) * 1deg)) translateZ(500px);
-}
-
-@keyframes rotate-axis {
-  from {
-      transform: perspective(800px) rotateY(0deg);
-  }
-  to {
-      transform: perspective(800px) rotateY(360deg);
-  }
-}
-
-  @keyframes slid {
-  0% {
-      transform: perspective(1000px) rotateY(0deg);
-  }
-
-  100% {
-      transform: perspective(1000px) rotateY(360deg);
-  }
 }
 
 #portfolio .portfolio-item {
