@@ -89,22 +89,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
     
     intervalId = setInterval(typing, 500);
-    
-    //photo
-    const images = document.querySelectorAll('#imageContainer img');
-    let index = 0;
 
-    function showNextImage() {
-        if (index < images.length) {
-            images[index].style.display = 'block';
-            images[index].classList.add('slide-in');
-            index++;
-            setTimeout(showNextImage, 1000); // 이미지가 나타나는 간격 (1초)
-        }
-    }
-
-    setTimeout(showNextImage, 5000); // 처음 이미지가 나타나는 시간 (5초 후)
-    
     //비디오 재생 관련
     const videoThumbnail = document.getElementById("video-thumbnail");
     videoThumbnail.addEventListener("click", playVideo);

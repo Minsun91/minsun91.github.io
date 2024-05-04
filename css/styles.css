@@ -11063,20 +11063,6 @@ p {
   }
 }
 
-/* 사진 */
-@keyframes slideInFromRight {
-  from {
-      transform: translateX(100%);
-  }
-  to {
-      transform: translateX(0);
-  }
-}
-
-.slide-in {
-  animation: slideInFromRight 1s ease;
-}
-
 /* 스크롤 */
 .btn-motion5 span {position: absolute;top: 0;left: 50%;width: 24px;height: 24px;margin-left: -12px;border-left: 1px solid beige;border-bottom: 1px solid beige;transform: rotate(-45deg);animation: btn-motion5 1.5s infinite;box-sizing: border-box;}
 
