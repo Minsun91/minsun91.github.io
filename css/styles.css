@@ -11063,6 +11063,22 @@ p {
   }
 }
 
+.section-heading a:hover {
+  padding: 1rem;
+  color: rgb(255, 200, 0);
+  filter: drop-shadow(0 0 2px rgba(36, 255, 200, 0.7))
+    drop-shadow(0 0 5px rgba(36, 255, 200, 0.7))
+    drop-shadow(0 0 15px rgba(36, 255, 200, 0.7));
+}
+
+.section-heading:hover {
+  padding: 1rem;
+  color: rgb(255, 200, 0);
+  filter: drop-shadow(0 0 2px rgba(36, 255, 200, 0.7))
+    drop-shadow(0 0 5px rgba(36, 255, 200, 0.7))
+    drop-shadow(0 0 15px rgba(36, 255, 200, 0.7));
+}
+
 /* 스크롤 */
 .btn-motion5 span {position: absolute;top: 0;left: 50%;width: 24px;height: 24px;margin-left: -12px;border-left: 1px solid beige;border-bottom: 1px solid beige;transform: rotate(-45deg);animation: btn-motion5 1.5s infinite;box-sizing: border-box;}
 

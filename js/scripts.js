@@ -236,3 +236,4 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // 페이지 로드 시 이미지 preload 및 lazy loading을 수행
     document.addEventListener("DOMContentLoaded", preloadAndLazyLoadImages);
 });
+
