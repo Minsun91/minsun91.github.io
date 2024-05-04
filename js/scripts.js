@@ -68,28 +68,38 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     // Typing effect
     const content = "MINSUN KIM";
-    const text = document.querySelector(".text");
+    const text = document.querySelector(".masthead-heading");
+    const profileImage = document.querySelector(".profile-image");
     let i = 0;
     let isDeleting = false;
     let intervalId;
+    const imageVisibleTime = 5000;
     
     function typing() {
         if (isDeleting) {
+            profileImage.style.display = "none";
             text.textContent = text.textContent.slice(0, -1);
             if (text.textContent === "") {
                 isDeleting = false;
                 i = 0;
             }
         } else {
-            text.textContent += content[i++];
-            if (i >= content.length) {
+            if (i < content.length) {
+                text.textContent += content[i++];
+            }
+            if (i === content.length) {
                 isDeleting = true;
+                profileImage.style.display = "inline";
+                setTimeout(function() {
+                    profileImage.style.display = "none";
+                }, imageVisibleTime);
             }
         }
     }
     
-    intervalId = setInterval(typing, 500);
-
+    intervalId = setInterval(typing, 1500); 
+    
+      
     //비디오 재생 관련
     const videoThumbnail = document.getElementById("video-thumbnail");
     videoThumbnail.addEventListener("click", playVideo);
