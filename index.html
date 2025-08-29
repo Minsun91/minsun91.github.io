@@ -43,6 +43,23 @@
             background-color: white; /* 배경 흰색 넣으면 안 잘린 로고도 깔끔해짐 */
             padding: 5px; /* 여백 주면 더 예쁨 */
         }
+
+
+  .social-icons {
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  .social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
     </style>
     
 </head>
@@ -89,16 +106,28 @@
                     </b><br><br>
                 </p>
                     
-                    <div data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out" style="text-align: center;">
+                    <!-- <div data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out" style="text-align: center;">
                         <a class="btn btn-primary btn-xl text-uppercase " href="https://www.instagram.com/matagom10?igsh=Z2EzNW96bXllbTJn&utm_source=qr" target="_blank">“Connect with me</a>
-                    </div>
-                    <div data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out" style="text-align: center;">
-                        <a class="btn btn-primary btn-xl text-uppercase" href="https://linkedin.com/in/minsunkim167" target="_blank">🔗 LinkedIn</a>
-                        <a class="btn btn-primary btn-xl text-uppercase" href="https://www.youtube.com/" target="_blank">📺 YouTube</a>
-                        <a class="btn btn-primary btn-xl text-uppercase" href="https://blog.naver.com/kms91716" target="_blank">✍️ Blog</a>
-                        <a class="btn btn-primary btn-xl text-uppercase" href="https://www.instagram.com/matagom10?igsh=Z2EzNW96bXllbTJn&utm_source=qr" target="_blank">📸 Instagram</a>
-                    </div>
+                    </div> -->
                     
+                    <div style="text-align:center;">
+                        <button id="connectBtn" class="btn btn-primary btn-xl text-uppercase">CONNECT WITH ME</button>
+                        
+                        <div id="socialIcons" class="social-icons">
+                          <a href="https://linkedin.com/in/minsunkim167" target="_blank">🔗</a>
+                          <a href="https://youtube.com" target="_blank">📺</a>
+                          <a href="https://blog.naver.com/kms91716" target="_blank">✍️</a>
+                          <a href="https://instagram.com/matagom10" target="_blank">📸</a>
+                        </div>
+                      </div>
+                      
+                      <script>
+                        document.getElementById("connectBtn").addEventListener("click", function() {
+                          const icons = document.getElementById("socialIcons");
+                          icons.style.display = icons.style.display === "none" ? "block" : "none";
+                        });
+                      </script>
+
             </div>
 
         </div>
@@ -167,7 +196,7 @@
                                     <i class="fas fa-circle fa-stack-2x text-primary"></i>
                                     <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
                                 </span>
-                                <h4 class="my-3" style="color: beige;">Digital & Creative</h4>
+                                <h4 class="my-3" style="color: beige;">Content & Insights</h4>
                                 <img src="assets/img/logos/youtube.png" class="logo-icon" style="border-radius: 50%;"> Youtube
                                 <div class="side">
                                     <img src="assets/img/logos/blog.png" class="logo-icon"> Blog
