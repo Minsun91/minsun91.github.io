@@ -39,55 +39,136 @@
             height: 50px;
             object-fit: contain;
             margin: 5px;
-            border-radius: 50%; /* 동그랗게 */
-            background-color: white; /* 배경 흰색 넣으면 안 잘린 로고도 깔끔해짐 */
-            padding: 5px; /* 여백 주면 더 예쁨 */
+            border-radius: 50%;
+            background-color: white;
+            padding: 5px;
         }
 
+        .social-icons {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
 
-  .social-icons {
-    display: none;
-    margin-top: 20px;
-    animation: fadeIn 0.5s ease-in-out;
-  }
-  .social-icons a {
-    margin: 0 10px;
-    font-size: 24px;
-    text-decoration: none;
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-5px); }
-  60% { transform: translateY(-3px); }
-}
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 24px;
+            text-decoration: none;
+        }
 
-#connectBtn {
-  animation: bounce 2s infinite;
-  cursor: pointer;
-}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
 
-.social-hidden {
-  display: none;
-  margin-top: 20px;
-  text-align: center;
-}
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-#socialLinks a {
-  font-size: 30px;
-  margin: 0 10px;
-  color: #FFD700;
-  transition: transform 0.2s, color 0.2s;
-}
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
 
-#socialLinks a:hover {
-  transform: scale(1.2);
-  color: #fff;
-}
+            40% {
+                transform: translateY(-5px);
+            }
+
+            60% {
+                transform: translateY(-3px);
+            }
+        }
+
+        #connectBtn {
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        .social-hidden {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #socialLinks a {
+            font-size: 30px;
+            margin: 0 10px;
+            color: #FFD700;
+            transition: transform 0.2s, color 0.2s;
+        }
+
+        #socialLinks a:hover {
+            transform: scale(1.2);
+            color: #fff;
+        }
+
+        /* 카테고리 섹션 스타일 */
+        .category-section {
+            margin-bottom: 80px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #FFD700;
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            margin-right: 20px;
+            color: #FFD700;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: beige;
+            margin: 0;
+        }
+
+        .category-description {
+            color: #aaa;
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+
+        .blog-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .view-all-btn {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .view-all-btn a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border: 2px solid #FFD700;
+            padding: 10px 30px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .view-all-btn a:hover {
+            background-color: #FFD700;
+            color: #212529;
+        }
     </style>
+
     
 </head>
 
@@ -119,7 +200,7 @@
       </nav>
       
     <header class="masthead" style="display:flex;align-items: center;justify-content: space-around;">
-        <!-- 텍스트를 담는 div -->
+
         <div class="text-container">
             <div class="container" style="margin-bottom: 30px; margin-top: 100px; text-align: center;">
                 <!-- <div class="masthead-subheading">SCM Specialist</div> -->
@@ -144,7 +225,6 @@
   CONNECT WITH ME <i class="fas fa-chevron-down"></i>
 </button>
 
-<!-- 숨겨진 소셜 아이콘 박스 -->
 <div id="socialLinks" class="social-hidden">
   <a href="https://linkedin.com/in/minsunkim167" target="_blank"><i class="fab fa-linkedin"></i></a>
   <a href="https://www.youtube.com/@matagom10" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -177,789 +257,184 @@
         </div>
              
     </header>
-    <div style="background-color: #212529; position:relative; height:100px; display:flex;align-items: center;">
-        <div class="btn-motion5">
-            <span></span>
-        </div>
-    </div>
-
-    <!-- Certi -->
-    <!-- <header class="masthead">
-        <section class="page-section" id="certi" style="background-color: #212529;">
-
-            <div class="container">
-                <div data-aos="fade-down" data-aos-duration="1000">
-                    <div class="text-center">
-                        <h2 class="section-heading text-uppercase" style="color: beige;">CERTIFICATES</h2>
-                    </div>
-
-                    <div class="row text-center">
-                        <div class="col-md-4 section-box backend-box">
-                            <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="fas fa-database fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <h4 class="my-3" style="color: beige;">Backend</h4>
-                        </div>
-
-                        <div class="col-md-4 section-box frontend-box">
-                            <div data-aos="fade-down" data-aos-duration="1000">
-                                <span class="fa-stack fa-4x">
-                                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                    <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                                </span>
-                                <h4 class="my-3" style="color: beige;">Frontend</h4>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-    </header> -->
-
-   
-
-    <!-- Portfolio Grid-->
-    <header class="masthead">
-
-        <section class="page-section bg-light" id="portfolio" style="background-color: #212529;">
-            <div class="container">
-                <!--portfolio 시작 -->
-                <div data-aos="fade-down" data-aos-duration="1000">
-                    <div class="text-center">
-                        <h2 class="section-heading text-uppercase" style="color: beige;">Blog Posts</h2>
-                    </div>
-
-                    <div class="swiper-container" style="display: flex; justify-content: center;">
-                        <div class="swiper-wrapper" style="display: flex;">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                                <div class="portfolio-item">
-                                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                                        <div class="portfolio-hover">
-                                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                        </div>
-                                        <div style="text-align:center;">
-                                            <img class="img-fluid" src="assets/img/portfolio/1.png" alt="..."
-                                                style="width:368px; height:200px" />
-                                        </div>
-                                    </a>
-                                    <div class="portfolio-caption">
-                                        <div class="portfolio-caption-heading" style="color: beige;">Spiritory
-                                        </div>
-                                        <div class="portfolio-caption-subheading text-muted">Trading platform
-                                            for whiskies,
-                                            enabling easy trading, investment, and collection.</div>
-                                    </div>
-                                    <!-- </div> -->
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <!-- <div class="col-lg-4 col-md-6 mb-4"> -->
-                                <div class="portfolio-item"
-                                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-                                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                                        <!-- href="https://minsunportfolio.notion.site/BookMinsoonNow-f122b0d50c0947198ddf76c3522105e4"> -->
-                                        <div class="portfolio-hover">
-                                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                        </div>
-                                        <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..."
-                                            style="width:368px; height:200px;" />
-                                    </a>
-                                    <div class="portfolio-caption">
-                                        <div class="portfolio-caption-heading" style="color: beige;">
-                                            BookMinsoonNow</div>
-                                        <div class="portfolio-caption-subheading text-muted">A reservation site
-                                            for my
-                                            friends
-                                            who are afraid of rejecting invitations</div>
-                                    </div>
-                                </div>
-                                <!-- </div> -->
-                            </div>
-
-                            <div class="swiper-slide">
-                                <!-- <div class="col-lg-4 col-md-6 mb-4"> -->
-                                <div class="portfolio-item"
-                                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-                                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                                        <!-- href="https://minsunportfolio.notion.site/CLIPs-Best-Project-award-ed77c8d575174eada0880842fb86cd29"> -->
-                                        <div class="portfolio-hover">
-                                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                        </div>
-                                        <img class="img-fluid" src="assets/img/portfolio/2.png" alt="..."
-                                            style="width:365px; height:200px;" />
-                                    </a>
-                                    <div class="portfolio-caption">
-                                        <div class="portfolio-caption-heading" style="color: beige;">CLIPS</div>
-                                        <div class="portfolio-caption-subheading text-muted">Application for
-                                            managing
-                                            appointments and recommending places around users</div>
-                                    </div>
-                                </div>
-                                <!-- </div> -->
-                            </div>
-
-                            <div class="swiper-slide">
-                                <!-- <div class="col-lg-4 col-md-6 mb-4"> -->
-                                <div class="portfolio-item">
-                                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                                        <!-- href="https://minsunportfolio.notion.site/Tindater-5c072580e18443f7918d7ac6d3113a8e"> -->
-                                        <div class="portfolio-hover">
-                                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i>
-                                            </div>
-                                        </div>
-                                        <div style="text-align:center;">
-                                            <img class="img-fluid" src="assets/img/portfolio/3.png" alt="..."
-                                                style="width:368px; height:200px;" />
-                                        </div>
-                                    </a>
-                                    <div class="portfolio-caption">
-                                        <div class="portfolio-caption-heading" style="color: beige;">Tindater
-                                        </div>
-                                        <div class="portfolio-caption-subheading text-muted">Clone of the dating
-                                            app Tinder
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- </div> -->
-                            </div>
-
-                            <!-- <div class="swiper-slide">
-                                <div class="portfolio-item">
-                                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                                        <div class="portfolio-hover">
-                                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i>
-                                            </div>
-                                        </div>
-                                        <div style="text-align:center;">
-                                            <img class="img-fluid" src="assets/img/portfolio/4.png" alt="..."
-                                                style="width:368px; height:200px;" />
-                                        </div>
-                                    </a>
-                                    <div class="portfolio-caption">
-                                        <div class="portfolio-caption-heading" style="color: beige;">Tikkle
-                                        </div>
-                                        <div class="portfolio-caption-subheading text-muted"> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-    </header>
-
-    <div style="background-color: #212529; position:relative; height:100px; display:flex;align-items: center;">
-        <div class="btn-motion5">
-            <span></span>
-        </div>
-    </div>
-
-
-        <!-- Services-->
-        <header class="masthead">
-            <section class="page-section" id="skill" style="background-color: #212529;">
     
-                <div class="container">
-                    <div data-aos="fade-down" data-aos-duration="1000">
-                        <div class="text-center">
-                            <h2 class="section-heading text-uppercase" style="color: beige;">
-                                <a href="https://drive.google.com/file/d/1VE7USv0YDRmLn8zlVKAEUsexoZwlHuVO/view?usp=sharing" style="color: inherit; text-decoration: none;">What I Do</a>
-                            </h2>
+    <div style="background-color: #212529; position:relative; height:100px; display:flex;align-items: center;">
+        <div class="btn-motion5">
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Blog Posts Section -->
+    <section class="page-section bg-light" id="blog" style="background-color: #212529; padding: 100px 0;">
+        <div class="container">
+
+            <!-- Travel Section -->
+            <div class="category-section" data-aos="fade-up" data-aos-duration="1000">
+                <div class="category-header" style="justify-content: center;">
+                    <div class="category-icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <div style="text-align: center;">
+                        <h2 class="category-title">Travel</h2>
+                        <p class="category-description">Adventures, stories, and lessons from the road</p>
+                    </div>
+                </div>
+
+                <div class="row" style="justify-content: center;">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card bg-dark border-0 blog-card">
+                            <img src="assets/img/portfolio/5.jpg" class="card-img-top" alt="Sri Lanka Travel">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: beige;">Sri Lanka: Tea, Tuk-tuks, and Chaos</h5>
+                                <p class="card-text" style="color: #ccc;">A week of trains, coconuts, and unexpected
+                                    peace in the island that runs on chai and smiles.</p>
+                                <a href="posts/travel-sri-lanka.html" class="btn btn-outline-light btn-sm">Read more
+                                    →</a>
+                            </div>
                         </div>
+                    </div>
                     
-                        <div class="row text-center">
-                            <!-- Backend -->
-                            <div class="col-md-4 section-box backend-box">
-                                <span class="fa-stack fa-4x">
-                                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                    <i class="fas fa-database fa-stack-1x fa-inverse"></i>
-                                </span>
-                                <h4 class="my-3" style="color: beige;">Supply Chain & Analytics</h4>
-                                <div class="side">
-                                    <img src="assets/img/logos/SAP.webp" class="logo-icon"> SAP
-                                    <img src="assets/img/logos/ms.png" class="logo-icon"> Microsoft
-                                </div>
-                                <div class="side">
-                                    <img src="assets/img/logos/dm.webp" class="logo-icon"> Demand Forecasting & Planning
-                                </div>
-                            </div>
-                        
-                            <!-- Frontend -->
-                            <div class="col-md-4 section-box frontend-box">
-                                <div data-aos="fade-down" data-aos-duration="1000">
-                                    <span class="fa-stack fa-4x">
-                                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    <h4 class="my-3" style="color: beige;">Web Development</h4>
-                                    <div class="side">
-                                        <img src="assets/img/logos/be.png" class="logo-icon"> Node.js, Express, API Design <br>
-                                        <img src="assets/img/logos/fe.png" class="logo-icon"> JavaScript, React, HTML, CSS<br>
-                                        <img src="assets/img/logos/db.png" class="logo-icon"> Firebase, Strap, AWS<br>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <!-- Tool -->
-                            <div class="col-md-4 section-box tool-box">
-                                <div data-aos="fade-down" data-aos-duration="1000">
-                                    <span class="fa-stack fa-4x">
-                                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                        <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    <h4 class="my-3" style="color: beige;">Content & Insights</h4>
-                                    <img src="assets/img/logos/youtube.png" class="logo-icon" style="border-radius: 50%;"> Youtube
-                                    <div class="side">
-                                        <img src="assets/img/logos/blog.png" class="logo-icon"> Blog
-                                    </div>
-                                </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card bg-dark border-0 blog-card">
+                            <img src="assets/img/portfolio/japan.jpg" class="card-img-top" alt="Japan Travel">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: beige;">Tokyo to Kyoto</h5>
+                                <p class="card-text" style="color: #ccc;">From neon lights to temple gardens — a journey through contrasts.</p>
+                                <a href="posts/travel/japan.html" class="btn btn-outline-light btn-sm">Read more →</a>
                             </div>
                         </div>
                     </div>
-                </div>
-    
-            </section>
-        </header>
-        <div style="background-color: #212529; position:relative; height:100px; display:flex;align-items: center;">
-            <div class="btn-motion5">
-                <span></span>
-            </div>
-        </div>
-
-    <!-- About-->
-    <header class="masthead">
-        <section class="page-section" id="about" style="background-color: #212529;">
-            <div class="container">
-                <div data-aos="fade-down" data-aos-duration="1000">
-                    <div class="text-center">
-                        <h2 class="section-heading text-uppercase" style="color: beige;">My Journey</h2>
-                        <h3 class="section-subheading text-muted"> </h3>
-                    </div>
-                    <ul class="timeline">
-
-                        <li class="timeline-inverted">
-                            <div class="timeline-image"><img class="rounded-circle img-fluid"
-                                    src="assets/img/lx_hausys.png" alt="..." /></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2024-Present</h4>
-                                    <h4 class="subheading" style="color: beige;">LX Hausys Europe GmbH</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <div data-aos="slide-left" data-aos-duration="2000">
-                                        <p class="text-muted">
-                                            As an SCM Specialist, I am responsible for placing orders with factories and managing imports of interior materials into Germany. <br>
-                                             My daily work heavily relies on SAP and Excel for data-driven order management, forecasting, and process optimization, ensuring accuracy and efficiency across the supply chain.
-                                         </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-
-                        <!-- <li>
-                            <div class="timeline-image"><img class="rounded-circle img-fluid"
-                                    src="assets/img/lx_hausys.png" alt="..." /></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <div class="timeline-body">
-                                    <h4>2024-Present</h4>
-                                    <h4 class="subheading" style="color: beige;">LX Hausys Europe GmbH</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <div data-aos="slide-left" data-aos-duration="2000">
-                                        <p class="text-muted"> As an SCM Specialist, 
-                                            I am responsible for placing orders with factories and 
-                                            managing imports of interior materials into Germany. <br>
-                                            My daily work heavily relies on SAP and Excel for 
-                                            data-driven order management, forecasting, and process optimization, 
-                                            ensuring accuracy and efficiency across the supply chain.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li> -->
-                        
-                        <li>
-                            <div class="timeline-image"><img class="rounded-circle img-fluid"
-                                    src="assets/img/about/1.webp" alt="..." /></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2023-2024</h4>
-                                    <h4 class="subheading" style="color: beige;">Spiritory</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <div data-aos="slide-right" data-aos-duration="2000">
-                                        <p class="text-muted">I worked as a backend developer at a startup in Germany,
-                                            where
-                                            I
-                                            implemented features for automatic email sending for all flows, order
-                                            confirmation
-                                            PDF
-                                            generation, data migration from firebase to strapi, and shipping/tracking
-                                            link
-                                            generation.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="timeline-inverted">
-                            <div class="timeline-image"><img class="rounded-circle img-fluid"
-                                    src="assets/img/about/2.png" alt="..." /></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2022</h4>
-                                    <h4 class="subheading" style="color: beige;">Coding Bootcamp</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <div data-aos="slide-left" data-aos-duration="2000">
-                                        <p class="text-muted">
-                                            I learned Node.js through an online bootcamp and completed team projects
-                                            such as
-                                            Clips
-                                            and Tindater. I worked with my team members to complete every step of the
-                                            web
-                                            development process, from planning to deployment.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image"><img class="rounded-circle img-fluid"
-                                    src="assets/img/about/3.jpeg" alt="..." /></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2019-2021</h4>
-                                    <h4 class="subheading" style="color: beige;">PanAsia</h4>
-                                </div>
-                                <div class="timeline-body">
-
-                                    <div data-aos="slide-right" data-aos-duration="2000">
-                                        <p class="text-muted">
-                                            As a buyer for Asian food at a wholesale company in Europe, my main
-                                            responsibilities
-                                            were demand forecasting and new product development. I also automated the
-                                            quantity
-                                            calculation process by creating an Excel spreadsheet and introduced Notion
-                                            to
-                                            improve
-                                            communication between team members in Austria and Korea.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image"><img class="rounded-circle img-fluid"
-                                    src="assets/img/about/4.jpeg" alt="..." /></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2017-2019</h4>
-                                    <h4 class="subheading" style="color: beige;">Korea Foods</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <div data-aos="slide-left" data-aos-duration="2000">
-                                        <p class="text-muted">
-                                            I had the opportunity to work as a buyer for a leading Korean food
-                                            distributor
-                                            in the UK. My primary focus was on sourcing and importing Korean snacks and
-                                            beverages
-                                            to meet the ever-growing demand in the British market. Alongside this, I
-                                            also acquired
-                                            valuable skills in Excel automation.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>
-                                Be Part
-                                <br />
-                                Of Our
-                                <br />
-                                Story!
-                            </h4>
-                        </div>
-                    </li> -->
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!-- Team-->
-        </div>
-        </section>
-        <!-- Footer-->
-        <!-- <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="instagram"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
-                    </div>
-                </div>
-            </div>
-        </footer> -->
-
-        <!-- Portfolio Modals-->
-        <!-- Portfolio item 1 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Spiritory</h2>
-                                    <p class="item-intro text-muted">First whiskey trading trading platform.</p>
-
-                                    <div id="video-container-1">
-                                        <img id="video-thumbnail" src="https://www.youtube.com/watch?v=HyVOByhXejk"
-                                            alt="Video Thumbnail">
-                                    </div>
-
-                                    <div>
-                                        <p>
-                                            As a backend developer at my inaugural position, I contributed to the
-                                            inception
-                                            of the world's premier whiskey trading platform.
-                                        </p>
-                                        <ul style="text-align: left;">
-                                            <li>Managed email services, delivering welcome messages, content
-                                                notifications,
-                                                invoices, and user action updates.</li>
-                                            <li>Handled invoice generation for sellers and buyers, integrating APIs for
-                                                PDF
-                                                creation, ensuring smooth transactions.</li>
-                                            <li>Collaborated with Stripe and Auth0 for seamless email integration.</li>
-                                            <li>Developed and maintained frontend integration endpoints with colleagues
-                                                for
-                                                cohesive platform operation.</li>
-                                        </ul>
-                                    </div>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Tech Stack:</strong>
-                                            Typescript, React, PostgreSQL, Docker, Stripe, Auth0, Azure, Jira
-                                        </li>
-                                        <li>
-                                            <strong>Website : </strong>
-                                            <a href="https://spiritory.com">https://spiritory.com</a>
-                                        </li>
-                                        <li>
-                                            <strong>Period : </strong>
-                                            03.2023-01.2024
-                                        </li>
-                                        <li>
-                                            <strong>Reference letter : </strong>
-                                            <a
-                                                href="https://drive.google.com/file/d/1QQdeflreSKU2khFyWHH5QXYn6t1DLJqw/view?usp=sharing">English
-                                                version</a> /
-                                            <a
-                                                href="https://drive.google.com/file/d/1wSwzYclmGJHWuLvuUAX4oCSgrXKR6HMT/view?usp=sharing">German
-                                                version</a>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
-                                        type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card bg-dark border-0 blog-card">
+                            <img src="assets/img/portfolio/europe.jpg" class="card-img-top" alt="Europe Travel">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: beige;">Backpacking Europe</h5>
+                                <p class="card-text" style="color: #ccc;">Two weeks, five countries, and lessons learned from getting lost.</p>
+                                <a href="posts/travel/europe.html" class="btn btn-outline-light btn-sm">Read more →</a>
                             </div>
                         </div>
                     </div>
+                    <!-- 추가 여행 포스트를 여기에 -->
+                </div>
+
+                <div class="view-all-btn">
+                    <a href="blog.html#travel">View all Travel posts →</a>
                 </div>
             </div>
-        </div>
-        <!-- Portfolio item 2 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Book Minsoon Now</h2>
-                                    <p class="item-intro text-muted">Reservation site for my friends</p>
-                                    <div id="video-container-2">
-                                        <!-- <img id="video-thumbnail" src="https://www.youtube.com/watch?v=HyVOByhXejk"
-                                            alt="Video Thumbnail"> -->
-                                    </div>
-                                    <p>
-                                        Second frontend project using React and pocketBase to facilitate scheduling
-                                        plans
-                                        for my friends.
-                                    <ul style="text-align: left;">
-                                        <li>
-                                            Implementation of routing for navigation between landing/reserve/get pages.
-                                        </li>
-                                        <li>
-                                            Integration of APIs for fetching and managing data from pocketbase.
-                                        </li>
-                                        <li>
-                                            Handling of events to enable user interactions and dynamic updates within
-                                            the
-                                            application.
-                                        </li>
-                                        <li>
-                                            Integration of pocketBase OAuth for login and registration.
-                                        </li>
-                                    </ul>
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Tech Stack:</strong>
-                                            React, Node.js, PocketBase
-                                        </li>
-                                        <a href="https://zrr.kr/a0LJ">https://bookms-git-reserve-minsun.vercel.app</a>
-                                        </li>
-                                        <li>
-                                            <strong>Period : </strong>
-                                            03.2024
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
-                                        type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
+
+            <!-- Life Section -->
+            <div class="category-section" data-aos="fade-up" data-aos-duration="1000">
+                <div class="category-header" style="justify-content: center;">
+                    <div class="category-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div style="text-align: center;">
+                        <h2 class="category-title">Life</h2>
+                        <p class="category-description">Things I love, moments I cherish, and everyday joys</p>
+                    </div>
+                </div>
+
+                <div class="row" style="justify-content: center;">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card bg-dark border-0 blog-card">
+                            <img src="assets/img/portfolio/1.png" class="card-img-top" alt="Perfume Review">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: beige;">Soap & Roses: My Favorite Scents</h5>
+                                <p class="card-text" style="color: #ccc;">Soft, clean, and quietly addictive. A look
+                                    into perfumes that smell like calm mornings.</p>
+                                <a href="posts/perfume-review.html" class="btn btn-outline-light btn-sm">Read more →</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 3 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">CLIPS</h2>
-                                    <p class="item-intro text-muted">Application for managing appointments and
-                                        recommending places around users </p>
-                                    <!-- <div id="video-container"> -->
-                                    <div id="video-container-3" class="video-container">
-                                        <img id="video-thumbnail" src="https://www.youtube.com/watch?v=WTkQ1k11nWM"
-                                            alt="Video Thumbnail">
-                                    </div>
-                                    <p>
-                                        The project is a service that assists friends in deciding where to meet,
-                                        recommending random restaurants, bars, cafes, etc., located at the midpoint
-                                        between
-                                        users' locations.
-                                        As a backend developer on this project, I performed the following tasks:
-                                    <ul style="text-align: left;">
-                                        <li>Recommend place by using map/local API, depending on user location.</li>
-                                        <li>Crawling images and business hours of recommended places.</li>
-                                        <li>Using Sequelize to create a database and establish each table relationship.
-                                        </li>
-                                        <li>Using multer-S3 to create/read/update/delete multiple review images.</li>
-                                    </ul>
-                                    </p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Tech Stack:</strong>
-                                            Node.js, Sequelize, AWS EC2, AWS S3, puppeteer, axios, cheerio
-                                        </li>
-                                        <li>
-                                            <strong>Github : </strong>
-                                            <a
-                                                href="https://github.com/codeing999/CLIPs-backend">https://github.com/codeing999/CLIPs-backend</a>
-                                        </li>
-                                        <li>
-                                            <strong>Period : </strong>
-                                            08.2022-10.2022
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
-                                        type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card bg-dark border-0 blog-card">
+                            <img src="assets/img/portfolio/running.jpg" class="card-img-top" alt="Running">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: beige;">Running Essentials</h5>
+                                <p class="card-text" style="color: #ccc;">The gear, routes, and playlists that keep me going mile after mile.</p>
+                                <a href="posts/life/running.html" class="btn btn-outline-light btn-sm">Read more →</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 4 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Tindater</h2>
-                                    <p class="item-intro text-muted">Clone of the dating app Tinder</p>
-                                    <div id="video-container-4">
-                                        <img id="video-thumbnail" src="https://www.youtube.com/watch?v=C5cSWuhuU1I"
-                                            alt="Video Thumbnail">
-                                    </div>
-                                    <p>
-                                        <br />
-                                        As part of a team project, <br />We created a friend recommendation service
-                                        similar to Tinder, targeting bootcamp colleagues.
-                                    <ul style="text-align: left;">
-                                        <li>Completed the registration/login functionality using JWT,</li>
-                                        <li> Implemented the user LIKE/DISLIKE feature.</li>
-                                        <li>Recommending new users randomly.</li>
-                                    </ul>
-                                    </p>
-                                    <ul class="list-inline">
-                                        <strong>Tech Stack:</strong>
-                                        Node.js, React, AWS EC2, Sequelize
-                                        </li>
-                                        <li>
-                                            <strong>Github : </strong>
-                                            <a
-                                                href="https://github.com/TinDater/TinDater-backend">https://github.com/TinDater/TinDater-backend</a>
-                                        </li>
-                                        <li>
-                                            <strong>Period : </strong>
-                                            08.2022
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
-                                        type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card bg-dark border-0 blog-card">
+                            <img src="assets/img/portfolio/hiking.jpg" class="card-img-top" alt="Hiking">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: beige;">Weekend Hikes</h5>
+                                <p class="card-text" style="color: #ccc;">Trails, peaks, and the quiet moments between breaths.</p>
+                                <a href="posts/life/hiking.html" class="btn btn-outline-light btn-sm">Read more →</a>
                             </div>
                         </div>
                     </div>
+                    <!-- 추가 라이프 포스트를 여기에 -->
+                </div>
+
+                <div class="view-all-btn">
+                    <a href="blog.html#life">View all Life posts →</a>
                 </div>
             </div>
-        </div>
-        <!-- Portfolio item 5 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Tikkle</h2>
-                                    <p class="item-intro text-muted">Personal Photo Album</p>
-                                    <p>My very first frontend project using React and Bootstrap <br /> to showcase
-                                        personal
-                                        photos.
-                                    <ul style="text-align: left;">
-                                        <li> Added Coin dropping effect when the button is clicked.</li>
-                                        <li> Deployed website using Vercel.</li>
-                                        </p>
-                                    </ul>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Tech Stack:</strong>
-                                            React, Node.js, Vercel
-                                        </li>
-                                        <li>
-                                            <strong>Website : </strong>
-                                            <a
-                                                href="https://tikkle-minsun.vercel.app?_vercel_share=TSeyfpZuPua7LBatzjbibLMK5eZMNgeN">https://tikkle-minsun.vercel.app</a>
 
-                                        </li>
-                                        <li>
-                                            <strong>Github: </strong>
-                                            <a
-                                                href="https://github.com/Minsun91/tikkle.git">https://github.com/Minsun91/tikkle.git</a>
-                                        </li>
-                                        <li>
-                                            <strong>Period : </strong>
-                                            02.2024
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
-                                        type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
+            <!-- Tech Section -->
+            <div class="category-section" data-aos="fade-up" data-aos-duration="1000">
+                <div class="category-header" style="justify-content: center;">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div style="text-align: center;">
+                        <h2 class="category-title">Tech</h2>
+                        <p class="category-description">Tools, automations, and digital experiments</p>
+                    </div>
+                </div>
+
+                <div class="row" style="justify-content: center;">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card bg-dark border-0 blog-card">
+                            <img src="assets/img/portfolio/3.png" class="card-img-top" alt="Automation">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: beige;">Automating Life with n8n</h5>
+                                <p class="card-text" style="color: #ccc;">From Notion cover syncs to TMDb connections —
+                                    how I'm making my digital life run itself.</p>
+                                <a href="posts/automation.html" class="btn btn-outline-light btn-sm">Read more →</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 6 modal popup-->
-
-        </div>
-    </header>
-    <div style="background-color: #212529; position:relative; height:100px; display:flex;align-items: center;">
-        <div class="btn-motion5">
-            <span></span>
-        </div>
-    </div>
-
-    <header class="masthead">
-        <section class="page-section bg-light" id="team">
-            <div class="container text-center">
-
-                <!-- <div data-aos="fadeInUp"> -->
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase" style="color: beige;">Contact</h2>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-4">
-                        <div class="team-member text-center">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..."
-                                style="max-width: 150px; height: 170px;">
-                            <h4> </h4>
-                            <a class="btn btn-dark btn-social mx-2" href="mailto:minsunkim167@gmail.com"
-                                aria-label="Parveen Anand Twitter Profile"><i class="fa-regular fa-envelope"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/Minsun91"
-                                aria-label="Parveen Anand Facebook Profile"><i class="fab fa-github"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://linkedin.com/in/minsunkim167"
-                                aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i>
-                            </a>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card bg-dark border-0 blog-card">
+                            <img src="assets/img/portfolio/notion.jpg" class="card-img-top" alt="Notion Setup">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: beige;">My Notion Workspace</h5>
+                                <p class="card-text" style="color: #ccc;">How I organize everything from travel plans to weekly reviews in one place.</p>
+                                <a href="posts/tech/notion-setup.html" class="btn btn-outline-light btn-sm">Read more →</a>
+                            </div>
                         </div>
                     </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card bg-dark border-0 blog-card">
+                            <img src="assets/img/portfolio/productivity.jpg" class="card-img-top" alt="Productivity">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: beige;">Tools That Actually Work</h5>
+                                <p class="card-text" style="color: #ccc;">The apps, shortcuts, and workflows that save me hours every week.</p>
+                                <a href="posts/tech/productivity-tools.html" class="btn btn-outline-light btn-sm">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 추가 테크 포스트를 여기에 -->
                 </div>
 
-                <!-- 댓글 -->
-                <div id="disqus_thread" class="row justify-content-center"></div>
-                <script>
-                    (function () {
-                        var d = document, s = d.createElement('script');
-                        s.src = 'https://minsunportfolio.disqus.com/embed.js';
-                        s.setAttribute('data-timestamp', +new Date());
-                        (d.head || d.body).appendChild(s);
-                    })();
-                </script>
-                <!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
-                <!-- </div> -->
+                <div class="view-all-btn">
+                    <a href="blog.html#tech">View all Tech posts →</a>
+                </div>
             </div>
 
-        </section>
-    </header>
+        </div>
+    </section>
+
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
@@ -974,5 +449,9 @@
         });
     </script>
 </body>
-
+<footer class="footer py-4" style="background-color: #181a1b;">
+    <div class="container text-center">
+        <div style="color: #aaa;">© 2025 Minsun Kim | All rights reserved</div>
+    </div>
+</footer>
 </html>

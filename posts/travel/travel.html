@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis lenis-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Blog posts by Minsun Kim" />
+    <meta name="author" content="Minsun Kim" />
+
+    <meta property="og:url" content="https://minsun91.github.io/blog.html">
+    <meta property="og:title" content="Minsun's Blog">
+    <meta property="og:image" content="assets/img/portfolio/3.png">
+    <meta property="og:description" content="Blog by Minsun Kim">
+    <title>Minsun | Blog</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <style>
+        /* 카테고리 필터 스타일 */
+        .category-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 12px 30px;
+            border: 2px solid #FFD700;
+            background: transparent;
+            color: #FFD700;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #FFD700;
+            color: #212529;
+            transform: translateY(-2px);
+        }
+
+        .filter-btn i {
+            margin-right: 8px;
+        }
+
+        /* 블로그 카드 스타일 */
+        .blog-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .blog-card .card-body {
+            display: flex;
+            flex-direction: column;
+            min-height: 200px;
+        }
+
+        .blog-card .btn {
+            margin-top: auto;
+        }
+
+    </style>
+</head>
+
+<body id="page-top" style="background-color: #212529; color: beige;">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Blog Section -->
+<section class="page-section" id="blog" style="background-color: #212529; padding-top: 120px; min-height: 100vh;">
+        <div class="text-center" data-aos="fade-down" data-aos-duration="1000">
+            <h2 class="section-heading text-uppercase" style="color: beige;">Blog Posts</h2>
+            <h3 class="section-subheading text-muted" style="color: #aaa;">My thoughts, travels, and tech notes</h3>
+        </div>
+          
+        <div class="category-filters" data-aos="fade-up" data-aos-duration="800">
+            <a href="/posts/travel/asia/asia.html" class="filter-btn active">
+              <i class=" "></i> Asia
+            </a>
+            <a href="/posts/travel/europe/europe.html" class="filter-btn">
+              <i class=" "></i> Europe
+            </a>
+            <a href="/posts/travel/europe/africa.html" class="filter-btn">
+              <i class=" "></i> Africa
+            </a>
+        </div>
+</section>
+  
+    <footer class="footer py-4" style="background-color: #181a1b;">
+        <div class="container text-center">
+            <div style="color: #aaa;">© 2025 Minsun Kim | All rights reserved</div>
+        </div>
+    </footer>
+
+   </body>
+   
+</html>
