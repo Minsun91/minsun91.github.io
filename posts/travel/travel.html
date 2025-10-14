@@ -178,18 +178,23 @@
       // 날짜순 정렬 (최신순)
       posts.sort((a, b) => new Date(b.date) - new Date(a.date));
   
-      // 카드 생성
-      posts.forEach(post => {
+       // 카드 생성
+       posts.forEach(post => {
         const card = document.createElement('div');
         card.className = 'card';
-        card.innerHTML = `
-          <img src="/assets/img/default/travel.jpg" alt="${post.title}">
-          <div class="card-content">
-            <h3>${post.title}</h3>
-            <p>${post.intro}</p>
-            <a href="${post.href}">Read more →</a>
-          </div>
-        `;
+        const category = post.href.includes("/travel/") ? "travel"
+              : post.href.includes("/life/") ? "life"
+              : "tech";
+
+const region = post.href.match(/travel\/([^/]+)/)?.[1] || "default";
+card.innerHTML = `
+  <img src="/assets/img/${category}/${region}.jpg" alt="${post.title}">
+  <div class="card-content">
+    <h3>${post.title}</h3>
+    <p>${post.intro}</p>
+    <a href="${post.href}">Read more →</a>
+  </div>
+`;
         container.appendChild(card);
       });
     }
