@@ -117,6 +117,7 @@
                 </ul>
             </div>
         </div>
+        <div id="google_translate_element" style="display: inline-block;"></div>
     </nav>
 
 <!-- Blog Section -->
@@ -142,7 +143,7 @@
         </div>
 
 <div id="posts" class="post-grid"></div>
-
+</section>
 <script>
     const folders = ['/posts/tech'];
     const container = document.getElementById('posts');
@@ -195,9 +196,23 @@
     fetchPosts();
   </script>
   
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'ko,en,de,zh-CN,es,fr',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" 
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
 
-  </section>
-  
+</body>
+
 <div class="container text-center">
     <a href="../../blog.html" class="btn btn-outline-light btn-sm mb-3">← Back to Blog</a>
 </div>

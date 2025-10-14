@@ -119,6 +119,7 @@
                 </ul>
             </div>
         </div>
+        <div id="google_translate_element" style="display: inline-block;"></div>
     </nav>
 
 <!-- Blog Section -->
@@ -204,10 +205,27 @@ card.innerHTML = `
   
 
 </section>
-  
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'ko,en,de,zh-CN,es,fr',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" 
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+
+
 <div class="container text-center">
     <a href="../../blog.html" class="btn btn-outline-light btn-sm mb-3">← Back to Blog</a>
 </div>
+
+
     <footer class="footer py-4" style="background-color: #181a1b;">
         <div class="container text-center">
             <div style="color: #aaa;">© 2025 Minsun Kim | All rights reserved</div>

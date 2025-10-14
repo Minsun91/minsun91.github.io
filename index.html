@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" class="lenis lenis-smooth">
 
 <head>
@@ -29,11 +29,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
-    <style>
+    <style>    
         .logo-icon {
             width: 50px;
             height: 50px;
@@ -173,6 +173,7 @@
             background-color: #FFD700;
             color: #212529;
         }
+       
     </style>
 
     
@@ -201,8 +202,10 @@
               <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
               <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
             </ul>
+            <div id="google_translate_element"></div>
           </div>
         </div>
+        
       </nav>
       
     <header class="masthead" style="display:flex;align-items: center;justify-content: space-around;">
@@ -274,172 +277,72 @@
     <section class="page-section bg-light" id="blog" style="background-color: #212529; padding: 100px 0;">
         <div class="container">
 
-            <!-- Travel Section -->
-            <div class="category-section" data-aos="fade-up" data-aos-duration="1000">
-                <div class="category-header" style="justify-content: center;">
-                    <div class="category-icon">
-                        <i class="fas fa-plane-departure"></i>
-                    </div>
-                    <div style="text-align: center;">
-                        <h2 class="category-title">Travel</h2>
-                        <p class="category-description">Adventures, stories, and lessons from the road</p>
-                    </div>
-                </div>
+<!-- Travel Section -->
+<div class="category-section" data-aos="fade-up" data-aos-duration="1000">
+    <div class="category-header" style="justify-content: center;">
+        <div class="category-icon">
+            <i class="fas fa-plane-departure"></i>
+        </div>
+        <div style="text-align: center;">
+            <h2 class="category-title">Travel</h2>
+            <p class="category-description">Adventures, stories, and lessons from the road</p>
+        </div>
+    </div>
 
-                <div class="row" style="justify-content: center;">
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card bg-dark border-0 blog-card">
-                            <img src="assets/img/post/travel/sri.jpg" class="card-img-top" alt="Sri Lanka Travel">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: beige;">Sri Lanka 🇱🇰</h5>
-                                <p class="card-text" style="color: #ccc;">Two weeks of wild animals, coconuts, and swimming in the island that runs on chai and smiles.</p>
-                                <a href="/posts/travel/asia/sri-lanka.html" class="btn btn-outline-light btn-sm">Read more
-                                    →</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card bg-dark border-0 blog-card">
-                            <img src="assets/img/post/travel/slovenia.jpg" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: beige;">Slovenia 🇸🇮</h5>
-                                <p class="card-text" style="color: #ccc;">Silence, Beauty, and Sticker Shock</p>
-                                <a href="/posts/travel/europe/slovenia.html" class="btn btn-outline-light btn-sm">Read more →</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card bg-dark border-0 blog-card">
-                            <img src="assets/img/post/travel/wales.jpeg" class="card-img-top" alt="Europe Travel">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: beige;">>Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿e</h5>
-                                <p class="card-text" style="color: #ccc;">Skomer Island: Like Germany, Only Wilder (and Full of Puffins)</p>
-                                <a href="https://blog.naver.com/kms91716/223514759280" class="btn btn-outline-light btn-sm">Read more →</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 추가 여행 포스트를 여기에 -->
-                </div>
+    <!-- 여기에 동적으로 카드가 들어감 -->
+    <div class="row" id="travel-posts-container" style="justify-content: center;">
+        <!-- JavaScript로 자동 생성됨 -->
+    </div>
 
-                <div class="view-all-btn">
-                    <a href="/posts/travel/travel.html">View all Travel posts →</a>
-                </div>
-            </div>
+    <div class="view-all-btn">
+        <a href="/posts/travel/travel.html">View all Travel posts →</a>
+    </div>
+</div>
 
             <!-- Life Section -->
-            <div class="category-section" data-aos="fade-up" data-aos-duration="1000">
-                <div class="category-header" style="justify-content: center;">
-                    <div class="category-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div style="text-align: center;">
-                        <h2 class="category-title">Life</h2>
-                        <p class="category-description">Things I love, moments I cherish, and everyday joys</p>
-                    </div>
-                </div>
+<div class="category-section" data-aos="fade-up" data-aos-duration="1000">
+    <div class="category-header" style="justify-content: center;">
+        <div class="category-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+        <div style="text-align: center;">
+            <h2 class="category-title">Life</h2>
+            <p class="category-description">Things I love, moments I cherish, and everyday joys</p>
+        </div>
+    </div>
 
-                <div class="row" style="justify-content: center;">
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card bg-dark border-0 blog-card">
-                            <img src="assets/img/post/life/perfume.jpg" class="card-img-top" alt="Perfume Review">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: beige;">Soap & Roses: My Favorite Scents</h5>
-                                <p class="card-text" style="color: #ccc;">Soft, clean, and quietly addictive. A look
-                                    into perfumes that smell like calm mornings.</p>
-                                <a href="posts/perfume-review.html" class="btn btn-outline-light btn-sm">Read more →</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card bg-dark border-0 blog-card">
-                            <img src="assets/img/post/life/running.jpg" class="card-img-top" alt="Running">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: beige;">Running Essentials</h5>
-                                <p class="card-text" style="color: #ccc;">The gear, routes, and playlists that keep me going mile after mile.</p>
-                                <a href="posts/life/running.html" class="btn btn-outline-light btn-sm">Read more →</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card bg-dark border-0 blog-card">
-                            <img src="assets/img/post/life/hiking.jpg" class="card-img-top" alt="Hiking">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: beige;">Weekend Hikes</h5>
-                                <p class="card-text" style="color: #ccc;">Trails, peaks, and the quiet moments between breaths.</p>
-                                <a href="posts/life/hiking.html" class="btn btn-outline-light btn-sm">Read more →</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 추가 라이프 포스트를 여기에 -->
-                </div>
+    <div class="row" id="life-posts-container" style="justify-content: center;">
+        <!-- JavaScript로 자동 생성됨 -->
+    </div>
 
-                <div class="view-all-btn">
-                    <a href="posts/life/life.html">View all Life posts →</a>
-                </div>
-            </div>
+    <div class="view-all-btn">
+        <a href="/posts/life/life.html">View all Life posts →</a>
+    </div>
+</div>
 
             <!-- Tech Section -->
-            <div class="category-section" data-aos="fade-up" data-aos-duration="1000">
-                <div class="category-header" style="justify-content: center;">
-                    <div class="category-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div style="text-align: center;">
-                        <h2 class="category-title">Tech</h2>
-                        <p class="category-description">Tools, automations, and digital experiments</p>
-                    </div>
-                </div>
-
-                <div class="row" style="justify-content: center;">
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card bg-dark border-0 blog-card">
-                            <img src="assets/img/post/tech/" class="card-img-top" alt="Automation">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: beige;">Automating Life with n8n</h5>
-                                <p class="card-text" style="color: #ccc;">From Notion cover syncs to TMDb connections —
-                                    how I'm making my digital life run itself.</p>
-                                <a href="posts/tech/automation.html" class="btn btn-outline-light btn-sm">Read more →</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card bg-dark border-0 blog-card">
-                            <img src="assets/img/post/tech/" class="card-img-top" alt="Notion Setup">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: beige;">My AI placeground</h5>
-                                <p class="card-text" style="color: #ccc;"></p>
-                                <a href="posts/tech/ai.html" class="btn btn-outline-light btn-sm">Read more →</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card bg-dark border-0 blog-card">
-                            <img src="assets/img/portfolio/productivity.jpg" class="card-img-top" alt="Productivity">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: beige;">Tools That Actually Work</h5>
-                                <p class="card-text" style="color: #ccc;">The apps, shortcuts, and workflows that save me hours every week.</p>
-                                <a href="posts/tech/productivity-tools.html" class="btn btn-outline-light btn-sm">Read more →</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 추가 테크 포스트를 여기에 -->
-                </div>
-
-                <div class="view-all-btn">
-                    <a href="/posts/tech/tech.html">View all Tech posts →</a>
-                </div>
-            </div>
-
+<div class="category-section" data-aos="fade-up" data-aos-duration="1000">
+    <div class="category-header" style="justify-content: center;">
+        <div class="category-icon">
+            <i class="fas fa-code"></i>
         </div>
-    </section>
+        <div style="text-align: center;">
+            <h2 class="category-title">Tech</h2>
+            <p class="category-description">Tools, automations, and digital experiments</p>
+        </div>
+    </div>
 
+    <div class="row" id="tech-posts-container" style="justify-content: center;">
+        <!-- JavaScript로 자동 생성됨 -->
+    </div>
 
+    <div class="view-all-btn">
+        <a href="/posts/tech/tech.html">View all Tech posts →</a>
+    </div>
+</div>
+</section>
+
+   
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
@@ -453,10 +356,31 @@
             animatedClassName: 'animated',
         });
     </script>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'ko,en,de,zh-CN,es,fr',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" 
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+
+<script src="js/posts-data.js"></script>
+<script src="js/blog-renderer.js"></script>
+
 </body>
+
 <footer class="footer py-4" style="background-color: #181a1b;">
     <div class="container text-center">
         <div style="color: #aaa;">© 2025 Minsun Kim | All rights reserved</div>
     </div>
 </footer>
-</html>
+
+

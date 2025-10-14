@@ -91,6 +91,120 @@
   }
 }
 
+#google_translate_element {
+  margin-left: 15px;
+  display: inline-block;
+}
+
+body {
+  top: 0px !important;
+}
+
+/* 번역 */
+#google_translate_element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+/* 🔘 메인 드롭다운 버튼 */
+.goog-te-gadget-simple {
+  background-color: transparent !important;
+  border: 1.8px solid #FFD700 !important;
+  border-radius: 30px !important;
+  padding: 6px 16px !important;
+  font-size: 14px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  color: #FFF !important; /* ✅ 흰색으로 변경 */
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+}
+
+.goog-te-gadget-simple:hover {
+  background-color: rgba(255, 215, 0, 0.15) !important;
+  border-color: #FFF !important;
+}
+
+/* 🌍 텍스트 컬러 (Select Language) */
+.goog-te-gadget-simple .goog-te-menu-value span {
+  color: #FFF !important; /* ✅ 흰색 텍스트 */
+  font-weight: 500 !important;
+}
+
+/* 🔽 기본 “Select Language” 앞 화살표 제거 */
+.goog-te-gadget-simple .goog-te-menu-value span:first-child {
+  display: none !important;
+}
+
+/* 기본 아이콘 제거 */
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+/* 🪟 드롭다운 프레임 */
+.goog-te-menu-frame {
+  border: 1px solid #FFD700 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* 📋 드롭다운 메뉴 */
+.goog-te-menu2 {
+  background-color: #212529 !important;
+  border-radius: 10px !important;
+  padding: 6px 0 !important;
+  min-width: 160px !important;
+}
+
+/* 📄 각 언어 항목 */
+.goog-te-menu2-item {
+  background-color: transparent !important;
+  color: #FFD700 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  padding: 8px 16px !important;
+  transition: all 0.2s ease !important;
+  border: none !important;
+}
+
+/* 💫 hover 효과 */
+.goog-te-menu2-item:hover {
+  background-color: rgba(255, 215, 0, 0.15) !important;
+}
+
+/* ✅ 텍스트 색상 고정 (언어 이름) */
+.goog-te-menu2-item div,
+.goog-te-menu2-item span {
+  color: #FFD700 !important;
+}
+
+/* ✅ 선택된 항목 */
+.goog-te-menu2-item-selected {
+  background-color: rgba(255, 215, 0, 0.25) !important;
+}
+
+/* 🚫 드롭다운 앞의 깨지는 LTR 표시문자 제거 */
+.goog-te-menu2-item:before {
+  content: none !important;
+  display: none !important;
+}
+
+/* 📱 모바일 대응 */
+@media (max-width: 768px) {
+  #google_translate_element {
+    margin-top: 10px;
+    justify-content: flex-end;
+  }
+
+  .goog-te-gadget-simple {
+    padding: 5px 12px !important;
+    font-size: 12px !important;
+  }
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
