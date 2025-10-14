@@ -177,20 +177,24 @@
       posts.sort((a, b) => new Date(b.date) - new Date(a.date));
   
       // 카드 생성
-      posts.forEach(post => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-          <img src="/assets/img/default/travel.jpg" alt="${post.title}">
-          <div class="card-content">
-            <h3>${post.title}</h3>
-            <p>${post.intro}</p>
-            <a href="${post.href}">Read more →</a>
-          </div>
-        `;
-        container.appendChild(card);
-      });
-    }
+      const category = post.href.includes("/travel/") ? "travel"
+      : post.href.includes("/life/") ? "life"
+      : "tech";
+
+    const region = post.href.includes("/travel/") 
+        ? post.href.match(/travel\/([^/]+)/)?.[1]?.replace('.html', '') 
+        : post.href.includes("/life/")
+        ? post.href.match(/life\/([^/]+)/)?.[1]?.replace('.html', '')
+        : post.href.match(/tech\/([^/]+)/)?.[1]?.replace('.html', '');
+
+    card.innerHTML = `
+    <img src="assets/img/${category}/${region}.jpg" alt="${post.title}">
+    <div class="card-content">
+        <h3>${post.title}</h3>
+        <p>${post.intro}</p>
+        <a href="${post.href}">Read more →</a>
+    </div>
+    `;
   
     fetchPosts();
   </script>
