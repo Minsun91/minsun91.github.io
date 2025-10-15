@@ -20,6 +20,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="/js/load-navbar.js" defer></script>
+
 </head>
 
 <style>
@@ -58,7 +60,12 @@
     }
 
     @keyframes bounce {
-        0%, 20%, 50%, 80%, 100% {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
             transform: translateY(0);
         }
 
@@ -162,97 +169,84 @@
 
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"> </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-                Menu <i class="fas fa-bars ms-1"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="google_translate_element" style="display: inline-block;"></div>
-    </nav>
+    <div id="navbar-placeholder"></div>  
+      
 
-            <!-- Services-->
-            <header class="masthead">
-                <section class="page-section" id="skill" style="background-color: #212529;">
-        
-                    <div class="container">
-                        <div data-aos="fade-down" data-aos-duration="1000">
-                            <div class="text-center">
-                                <h2 class="section-heading text-uppercase" style="color: beige;">
-                                    <a href="https://drive.google.com/file/d/1VE7USv0YDRmLn8zlVKAEUsexoZwlHuVO/view?usp=sharing" style="color: inherit; text-decoration: none;">About Me</a>
-                                </h2>
+    <!-- Services-->
+    <header class="masthead">
+        <section class="page-section" id="skill" style="background-color: #212529;">
+
+            <div class="container">
+                <div data-aos="fade-down" data-aos-duration="1000">
+                    <div class="text-center">
+                        <h2 class="section-heading text-uppercase" style="color: beige;">
+                            <a href="https://drive.google.com/file/d/1VE7USv0YDRmLn8zlVKAEUsexoZwlHuVO/view?usp=sharing"
+                                style="color: inherit; text-decoration: none;">About Me</a>
+                        </h2>
+                    </div>
+
+                    <div class="row text-center">
+                        <!-- Backend -->
+                        <div class="col-md-4 section-box backend-box">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-database fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <h4 class="my-3" style="color: beige;">Supply Chain & Analytics</h4>
+                            <div class="side">
+                                <img src="assets/img/logos/SAP.webp" class="logo-icon"> SAP
+                                <img src="assets/img/logos/ms.png" class="logo-icon"> Microsoft
                             </div>
-                        
-                            <div class="row text-center">
-                                <!-- Backend -->
-                                <div class="col-md-4 section-box backend-box">
-                                    <span class="fa-stack fa-4x">
-                                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                        <i class="fas fa-database fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    <h4 class="my-3" style="color: beige;">Supply Chain & Analytics</h4>
-                                    <div class="side">
-                                        <img src="assets/img/logos/SAP.webp" class="logo-icon"> SAP
-                                        <img src="assets/img/logos/ms.png" class="logo-icon"> Microsoft
-                                    </div>
-                                    <div class="side">
-                                        <img src="assets/img/logos/dm.webp" class="logo-icon"> Demand Forecasting & Planning
-                                    </div>
+                            <div class="side">
+                                <img src="assets/img/logos/dm.webp" class="logo-icon"> Demand Forecasting & Planning
+                            </div>
+                        </div>
+
+                        <!-- Frontend -->
+                        <div class="col-md-4 section-box frontend-box">
+                            <div data-aos="fade-down" data-aos-duration="1000">
+                                <span class="fa-stack fa-4x">
+                                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                    <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <h4 class="my-3" style="color: beige;">Web Development</h4>
+                                <div class="side">
+                                    <img src="assets/img/logos/be.png" class="logo-icon"> Node.js, Express, API Design
+                                    <br>
+                                    <img src="assets/img/logos/fe.png" class="logo-icon"> JavaScript, React, HTML,
+                                    CSS<br>
+                                    <img src="assets/img/logos/db.png" class="logo-icon"> Firebase, Strap, AWS<br>
                                 </div>
-                            
-                                <!-- Frontend -->
-                                <div class="col-md-4 section-box frontend-box">
-                                    <div data-aos="fade-down" data-aos-duration="1000">
-                                        <span class="fa-stack fa-4x">
-                                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                                        </span>
-                                        <h4 class="my-3" style="color: beige;">Web Development</h4>
-                                        <div class="side">
-                                            <img src="assets/img/logos/be.png" class="logo-icon"> Node.js, Express, API Design <br>
-                                            <img src="assets/img/logos/fe.png" class="logo-icon"> JavaScript, React, HTML, CSS<br>
-                                            <img src="assets/img/logos/db.png" class="logo-icon"> Firebase, Strap, AWS<br>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <!-- Tool -->
-                                <div class="col-md-4 section-box tool-box">
-                                    <div data-aos="fade-down" data-aos-duration="1000">
-                                        <span class="fa-stack fa-4x">
-                                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                                        </span>
-                                        <h4 class="my-3" style="color: beige;">Content & Insights</h4>
-                                        <img src="assets/img/logos/youtube.png" class="logo-icon" style="border-radius: 50%;"> Youtube
-                                        <div class="side">
-                                            <img src="assets/img/logos/blog.png" class="logo-icon"> Blog
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+
+                        <!-- Tool -->
+                        <div class="col-md-4 section-box tool-box">
+                            <div data-aos="fade-down" data-aos-duration="1000">
+                                <span class="fa-stack fa-4x">
+                                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                    <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <h4 class="my-3" style="color: beige;">Content & Insights</h4>
+                                <img src="assets/img/logos/youtube.png" class="logo-icon" style="border-radius: 50%;">
+                                Youtube
+                                <div class="side">
+                                    <img src="assets/img/logos/blog.png" class="logo-icon"> Blog
                                 </div>
                             </div>
                         </div>
                     </div>
-        
-                </section>
-            </header>
-            
-            <div style="background-color: #212529; position:relative; height:100px; display:flex;align-items: center;">
-                <div class="btn-motion5">
-                    <span></span>
                 </div>
             </div>
+
+        </section>
+    </header>
+
+    <div style="background-color: #212529; position:relative; height:100px; display:flex;align-items: center;">
+        <div class="btn-motion5">
+            <span></span>
+        </div>
+    </div>
 
 
     <!-- About-->
@@ -277,9 +271,12 @@
                                 <div class="timeline-body">
                                     <div data-aos="slide-left" data-aos-duration="2000">
                                         <p class="text-muted">
-                                            As an SCM Specialist, I am responsible for placing orders with factories and managing imports of interior materials into Germany. <br>
-                                             My daily work heavily relies on SAP and Excel for data-driven order management, forecasting, and process optimization, ensuring accuracy and efficiency across the supply chain.
-                                         </p>
+                                            As an SCM Specialist, I am responsible for placing orders with factories and
+                                            managing imports of interior materials into Germany. <br>
+                                            My daily work heavily relies on SAP and Excel for data-driven order
+                                            management, forecasting, and process optimization, ensuring accuracy and
+                                            efficiency across the supply chain.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -308,7 +305,7 @@
                                 </div>
                             </div>
                         </li> -->
-                        
+
                         <li>
                             <div class="timeline-image"><img class="rounded-circle img-fluid"
                                     src="assets/img/about/1.webp" alt="..." /></div>
@@ -740,23 +737,22 @@
     <script>AOS.init();</script>
     <script type="text/javascript">
         function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: 'ko,en,de,zh-CN,es,fr',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-          }, 'google_translate_element');
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'ko,en,de,zh-CN,es,fr',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
         }
-        </script>
-        
-        <script type="text/javascript" 
-                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-        </script>
-    </body>
-    <footer class="footer py-4" style="background-color: #181a1b;">
-        <div class="container text-center">
-            <div style="color: #aaa;">© 2025 Minsun Kim | All rights reserved</div>
-        </div>
-    </footer>
+    </script>
 
-    </html>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+</body>
+<footer class="footer py-4" style="background-color: #181a1b;">
+    <div class="container text-center">
+        <div style="color: #aaa;">© 2025 Minsun Kim | All rights reserved</div>
+    </div>
+</footer>
+
+</html>

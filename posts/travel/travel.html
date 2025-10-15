@@ -74,156 +74,197 @@
         .blog-card .btn {
             margin-top: auto;
         }
-        body { background-color: #212529; color: beige; font-family: 'Montserrat', sans-serif; }
-    .post-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 30px;
-      padding: 40px;
-    }
-    .card {
-      background: #2c2f33;
-      border-radius: 16px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-    }
-    .card:hover { transform: translateY(-8px); box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3); }
-    .card img { width: 100%; height: 200px; object-fit: cover; }
-    .card-content { padding: 20px; flex: 1; display: flex; flex-direction: column; }
-    .card h3 { color: #FFD700; margin-bottom: 10px; }
-    .card p { flex: 1; color: #aaa; font-size: 0.95rem; }
-    .card a { color: #FFD700; text-decoration: none; font-weight: 600; margin-top: 10px; align-self: flex-start; }
 
+        body {
+            background-color: #212529;
+            color: beige;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .post-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .card {
+            background: #2c2f33;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card h3 {
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            flex: 1;
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        .card a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            align-self: flex-start;
+        }
     </style>
 </head>
 
 <body id="page-top" style="background-color: #212529; color: beige;">
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="index.html"> </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-                Menu <i class="fas fa-bars ms-1"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../../blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../../about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
-                </ul>
-            </div>
+      
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars ms-1"></i>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+              <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+      
+              <li class="nav-item">
+                <div id="google_translate_element" class="ms-3 mt-2"></div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div id="google_translate_element" style="display: inline-block;"></div>
-    </nav>
+      </nav>
+      
 
-<!-- Blog Section -->
-<section class="page-section" id="blog" style="background-color: #212529; padding-top: 120px; min-height: 100vh;">
+    <!-- Blog Section -->
+    <section class="page-section" id="blog" style="background-color: #212529; padding-top: 120px; min-height: 100vh;">
         <div class="text-center" data-aos="fade-down" data-aos-duration="1000">
             <h2 class="section-heading text-uppercase" style="color: beige;">Travel Posts</h2>
-            <h3 class="section-subheading text-muted" style="color: #aaa;">I believe a bit of struggle makes travel truly romantic.</h3>
+            <h3 class="section-subheading text-muted" style="color: #aaa;">I believe a bit of struggle makes travel
+                truly romantic.</h3>
         </div>
-          
+
         <div class="category-filters" data-aos="fade-up" data-aos-duration="800">
-            <a href="/posts/travel/asia/sri-lanka.html" class="filter-btn active">
-              <i class=" "></i> Asia
+            <a href="/posts/travel/asia/asia_index.html" class="filter-btn">
+                <i class=" "></i> Asia
             </a>
-            <a href="/posts/travel/europe/europe.html" class="filter-btn">
-              <i class=" "></i> Europe
+            <a href="/posts/travel/europe/europe_index.html" class="filter-btn">
+                <i class=" "></i> Europe
             </a>
-            <a href="/posts/travel/europe/africa.html" class="filter-btn">
-              <i class=" "></i> Africa
-            </a>  
+            <a href="/posts/travel/africa/africa_index.html" class="filter-btn">
+                <i class=" "></i> Africa
+            </a>
             <a href="/blog.html" class="filter-btn">
-              <i class=" "></i> Other posts
-            </a> 
+                <i class=" "></i> Other posts
+            </a>
         </div>
-       
-<div id="posts" class="post-grid"></div>
 
-<script>
-    const folders = ['/posts/travel/asia/', '/posts/travel/europe/', '/posts/travel/africa/'];
-    const container = document.getElementById('posts');
-  
-    async function fetchPosts() {
-      const posts = [];
-  
-      for (const folder of folders) {
-        const res = await fetch(folder);
-        const text = await res.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(text, 'text/html');
-        const links = [...doc.querySelectorAll('a')]
-          .filter(a => a.href.endsWith('.html') && !a.href.includes('travel.html'));
-  
-        for (const link of links) {
-          const postRes = await fetch(link.href);
-          const postText = await postRes.text();
-          const postDoc = parser.parseFromString(postText, 'text/html');
-  
-          const title = postDoc.querySelector('title')?.textContent.trim() ||
-                        link.href.split('/').pop().replace('.html', '').replace(/\d{4}-\d{2}-\d{2}-/, '').replace(/-/g, ' ');
-          const intro = postDoc.querySelector('meta[name="intro"]')?.content ||
-                        postDoc.querySelector('p')?.textContent.slice(0, 120) + '...';
-          const date = postDoc.querySelector('meta[name="date"]')?.content || '2000-01-01';
-  
-          posts.push({ title, intro, href: link.href, date });
+        <div id="posts" class="post-grid"></div>
+
+        <script>
+            const folders = ['/posts/travel/asia/', '/posts/travel/europe/', '/posts/travel/africa/'];
+            const container = document.getElementById('posts');
+
+            async function fetchPosts() {
+                const posts = [];
+
+                for (const folder of folders) {
+                    const res = await fetch(folder);
+                    const text = await res.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(text, 'text/html');
+                    const links = [...doc.querySelectorAll('a')]
+                        .filter(a => a.href.endsWith('.html') && !a.href.includes('travel.html'));
+
+                    for (const link of links) {
+                        const postRes = await fetch(link.href);
+                        const postText = await postRes.text();
+                        const postDoc = parser.parseFromString(postText, 'text/html');
+
+                        const title = postDoc.querySelector('title')?.textContent.trim() ||
+                            link.href.split('/').pop().replace('.html', '').replace(/\d{4}-\d{2}-\d{2}-/, '').replace(/-/g, ' ');
+                        const intro = postDoc.querySelector('meta[name="intro"]')?.content ||
+                            postDoc.querySelector('p')?.textContent.slice(0, 120) + '...';
+                        const date = postDoc.querySelector('meta[name="date"]')?.content || '2000-01-01';
+
+                        posts.push({ title, intro, href: link.href, date });
+                    }
+                }
+
+                // 날짜순 정렬 (최신순)
+                posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                // 카드 생성
+                posts.forEach(post => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    const category = post.href.includes("/travel/") ? "travel"
+                        : post.href.includes("/life/") ? "life"
+                            : "tech";
+
+                    const region = post.href.match(/travel\/([^/]+)/)?.[1] || "default";
+                    card.innerHTML = `
+                        <img src="/assets/img/${category}/${region}.jpg" alt="${post.title}">
+                        <div class="card-content">
+                            <h3>${post.title}</h3>
+                            <p>${post.intro}</p>
+                            <a href="${post.href}">Read more →</a>
+                        </div>
+                        `;
+                    container.appendChild(card);
+                });
+            }
+
+            fetchPosts();
+        </script>
+
+
+    </section>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'ko,en,de,zh-CN,es,fr',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
         }
-      }
-  
-      // 날짜순 정렬 (최신순)
-      posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-  
-       // 카드 생성
-       posts.forEach(post => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        const category = post.href.includes("/travel/") ? "travel"
-              : post.href.includes("/life/") ? "life"
-              : "tech";
-
-const region = post.href.match(/travel\/([^/]+)/)?.[1] || "default";
-card.innerHTML = `
-  <img src="/assets/img/${category}/${region}.jpg" alt="${post.title}">
-  <div class="card-content">
-    <h3>${post.title}</h3>
-    <p>${post.intro}</p>
-    <a href="${post.href}">Read more →</a>
-  </div>
-`;
-        container.appendChild(card);
-      });
-    }
-  
-    fetchPosts();
-  </script>
-  
-
-</section>
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'ko,en,de,zh-CN,es,fr',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
     </script>
-    
-    <script type="text/javascript" 
-            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
     </script>
 
 
-<div class="container text-center">
-    <a href="../../blog.html" class="btn btn-outline-light btn-sm mb-3">← Back to Blog</a>
-</div>
+    <div class="container text-center">
+        <a href="../../blog.html" class="btn btn-outline-light btn-sm mb-3">← Back to Blog</a>
+    </div>
 
 
     <footer class="footer py-4" style="background-color: #181a1b;">
@@ -231,5 +272,5 @@ card.innerHTML = `
             <div style="color: #aaa;">© 2025 Minsun Kim | All rights reserved</div>
         </div>
     </footer>
-   
+
 </html>

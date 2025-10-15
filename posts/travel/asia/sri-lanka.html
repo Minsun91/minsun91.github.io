@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
     <link href="/css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="/js/load-navbar.js" defer></script>
 
     <style>
         /* 카테고리 필터 스타일 */
@@ -160,29 +161,13 @@
       margin-right: 8px;
   }
   </style>
+
 </head>
 
 <body id="page-top" style="background-color: #212529; color: beige;">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"> </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-                Menu <i class="fas fa-bars ms-1"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="../../../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../../../blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../../../.=about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../../../contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar-placeholder"></div>   
 
     <header class="masthead" style="background-color:#181a1b; padding-top:120px; text-align:center;">
         <div class="container">
@@ -214,6 +199,19 @@
                 There’s a certain peace in the noise, once you stop resisting it.
             </p>
         </div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: 'ko,en,de,zh-CN,es,fr',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                    autoDisplay: false
+                }, 'google_translate_element');
+            }
+        </script>
+    
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
     </section>
 
     <footer class="footer py-4" style="background-color:#181a1b;">

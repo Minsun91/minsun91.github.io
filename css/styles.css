@@ -91,21 +91,27 @@
   }
 }
 
-#google_translate_element {
-  margin-left: 15px;
-  display: inline-block;
-}
-
 body {
   top: 0px !important;
 }
 
+
+
 /* 번역 */
 #google_translate_element {
+  position: relative;
   display: flex;
-  align-items: center;
+  z-index: 9999;
   justify-content: center;
   margin-left: 1rem;
+}
+
+.goog-te-menu-frame {
+  position: absolute !important;
+  top: 100% !important;
+  right: 0 !important;
+  z-index: 999999 !important;
+  display: block !important;
 }
 
 /* 🔘 메인 드롭다운 버튼 */
@@ -131,14 +137,10 @@ body {
 
 /* 🌍 텍스트 컬러 (Select Language) */
 .goog-te-gadget-simple .goog-te-menu-value span {
-  color: #FFF !important; /* ✅ 흰색 텍스트 */
+  color: #FFF !important;
   font-weight: 500 !important;
 }
 
-/* 🔽 기본 “Select Language” 앞 화살표 제거 */
-.goog-te-gadget-simple .goog-te-menu-value span:first-child {
-  display: none !important;
-}
 
 /* 기본 아이콘 제거 */
 .goog-te-gadget-icon {
@@ -3849,6 +3851,9 @@ textarea.form-control-lg {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  position: relative;
+  z-index: 10;
+  overflow: visible !important;
 }
 
 .nav-link {

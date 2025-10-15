@@ -11,6 +11,7 @@
     <meta property="og:title" content="Minsun's Blog">
     <meta property="og:image" content="assets/img/portfolio/3.png">
     <meta property="og:description" content="Blog by Minsun Kim">
+    <title>Minsun | Video</title>
 
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -18,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
     <link href="/css/styles.css" rel="stylesheet" />
+    <link href="/css/video.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <script src="/js/load-navbar.js" defer></script>
 
@@ -100,6 +102,7 @@
             color: #2ecc71;
         }
 
+        /* 숨김/보임 애니메이션 */
         .blog-item {
             animation: fadeIn 0.5s ease-in;
         }
@@ -118,110 +121,64 @@
                 transform: translateY(0);
             }
         }
-
-         /* Fade transition 효과 */
-  body {
-    opacity: 1;
-    transition: opacity 0.5s ease;
-  }
-  body.fade-out {
-    opacity: 0;
-  }
-
-  /* 버튼 스타일 */
-  .category-filters {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin: 40px 0;
-      flex-wrap: wrap;
-  }
-
-  .filter-btn {
-      padding: 12px 30px;
-      border: 2px solid #FFD700;
-      background: transparent;
-      color: #FFD700;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: 600;
-      font-size: 1rem;
-      text-decoration: none;
-  }
-
-  .filter-btn:hover,
-  .filter-btn.active {
-      background: #FFD700;
-      color: #212529;
-      transform: translateY(-2px);
-  }
-
-  .filter-btn i {
-      margin-right: 8px;
-  }
+        .blog-card img {
+        width: 100%;
+        aspect-ratio: 8/9;
+        object-fit: cover;
+        } 
     </style>
 </head>
 
 <body id="page-top" style="background-color: #212529; color: beige;">
 
     <!-- Navigation -->
-<div id="navbar-placeholder"></div> 
+    <div id="navbar-placeholder"></div>  
 
-    <header class="masthead" style="background-color:#181a1b; padding-top:120px; text-align:center;">
-        <div class="container">
-            <h1 class="section-heading text-uppercase" style="color: beige;">Sicily : Full of colours and taste</h1>
-            <p class="text-muted" style="color:#aaa;">April 2025</p>
-        </div>
-    </header>
+  <!-- 🔹 Video Grid Section -->
+  <!-- <section class="video-section container"> -->
+    <section class="video-section container" id="blog" style="background-color: #212529; padding-top: 120px; min-height: 100vh;">
+    <div class="text-center" data-aos="fade-down" data-aos-duration="1000">
+        <h2 class="section-heading text-uppercase" style="color: beige;">Short Videos</h2>
+        <h3 class="section-subheading text-muted" style="color: #aaa;"> highlights of my life </h3> <br>
+    </div>
+    <div id="videoContainer" class="video-grid"></div>
+  </section>
 
-    <section class="page-section" style="background-color:#212529;">
-        <div class="container">
-            <img src="../assets/img/portfolio/5.jpg" class="img-fluid rounded mb-5" alt="Sri Lanka view">
+   <!-- ✅ AOS Init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
-            <p style="line-height:1.8; color:#ddd;">
-                Sri Lanka was chaos in the best possible way — horns blaring, tea steaming, waves crashing.
-                Every corner smelled like cardamom and diesel, and somehow it all worked.
-            </p>
+  <!-- ✅ Video Data + JS -->
+  <script src="/js/video-data.js"></script>
+  <script src="/js/video.js"></script>
 
-            <p style="line-height:1.8; color:#ddd;">
-                From the hill country trains to the southern beaches, every town felt like a new tempo.
-                The tea fields in Nuwara Eliya were cinematic, and the tuk-tuks in Colombo? Terrifyingly fun.
-            </p>
+  <!-- ✅ Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'ko,en,de,zh-CN,es,fr',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+</script>
 
-            <blockquote style="color:#bfa; font-style:italic; border-left:3px solid beige; padding-left:10px;">
-                “Sri Lanka doesn’t ask you to relax — it demands it.”
-            </blockquote>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
 
-            <p style="line-height:1.8; color:#ddd;">
-                I left with sunburned shoulders, a phone full of strangers’ smiles, and a craving for coconut roti.
-                There’s a certain peace in the noise, once you stop resisting it.
-            </p>
-        </div>
-    </section>
+<footer class="footer py-4" style="background-color:#181a1b;">
+    <div class="container text-center">
+        <a href="../travel.html" class="btn btn-outline-light btn-sm mb-3">← Back to Blog</a>
+        <div style="color:#aaa;">© 2025 Minsun Kim</div>
+    </div>
+</footer>
 
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'ko,en,de,zh-CN,es,fr',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-    </script>
-    
-    <footer class="footer py-4" style="background-color:#181a1b;">
-        <div class="container text-center">
-            <a href="../travel.html" class="btn btn-outline-light btn-sm mb-3">← Back to Blog</a>
-            <div style="color:#aaa;">© 2025 Minsun Kim</div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
+
+

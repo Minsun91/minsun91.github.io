@@ -1,0 +1,66 @@
+.video-header {
+  background: linear-gradient(180deg, #000000a0, #000000a0), url("/assets/video-cover.jpg") center/cover no-repeat;
+  color: white;
+  padding: 150px 0 100px;
+}
+
+.video-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.video-subtitle {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.25rem;
+  opacity: 0.85;
+}
+
+.video-section {
+  padding: 80px 0;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+/* 🔹 비디오 카드 (다크 스타일) */
+.video-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #2b2b2b; 
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(255, 215, 0, 0.2);
+}
+
+.video-thumb iframe {
+  width: 100%;
+  height: 280px;  
+  border: none;
+}
+
+/* 🔹 카드 내부 텍스트 구역 */
+.video-info {
+  padding: 20px;
+  height: 100%;
+  background-color: #1e1e1e; 
+}
+
+.video-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: #fff; 
+}
+
+.video-info p {
+  color: #ccc;
+  font-size: 0.9rem;
+}

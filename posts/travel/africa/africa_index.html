@@ -11,7 +11,7 @@
     <meta property="og:title" content="Minsun's Blog">
     <meta property="og:image" content="assets/img/portfolio/3.png">
     <meta property="og:description" content="Blog by Minsun Kim">
-    <title>Minsun | Tech Posts</title>
+    <title>Minsun | Travel Posts</title>
 
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -75,6 +75,12 @@
             margin-top: auto;
         }
 
+        body {
+            background-color: #212529;
+            color: beige;
+            font-family: 'Montserrat', sans-serif;
+        }
+
         .post-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -127,91 +133,101 @@
             margin-top: 10px;
             align-self: flex-start;
         }
+        .asia-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .asia-section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .asia-img {
+      width: 50%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+
+    .asia-text {
+      width: 50%;
+      color: #ddd;
+    }
+
+    .asia-text h3 {
+      color: #ffcc00;
+      font-weight: 600;
+    }
+
+    .asia-text p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .readmore-link {
+      color: #ffcc00;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .readmore-link:hover {
+      text-decoration: underline;
+    }
     </style>
 </head>
 
 <body id="page-top" style="background-color: #212529; color: beige;">
-
+    <!-- Navigation -->
     <div id="navbar-placeholder"></div>   
-      
-
     <!-- Blog Section -->
     <section class="page-section" id="blog" style="background-color: #212529; padding-top: 120px; min-height: 100vh;">
         <div class="text-center" data-aos="fade-down" data-aos-duration="1000">
-            <h2 class="section-heading text-uppercase" style="color: beige;">Tech Posts</h2>
-            <h3 class="section-subheading text-muted" style="color: #aaa;">Things I’ve been into lately — mostly tech
-                and a bit of chaos.</h3>
+            <h2 class="section-heading text-uppercase" style="color: beige;">Africa Posts</h2>
+            <h3 class="section-subheading text-muted" style="color: #aaa;">I believe a bit of struggle makes travel
+                truly romantic.</h3>
         </div>
 
         <div class="category-filters" data-aos="fade-up" data-aos-duration="800">
-            <a href="/posts/tech/" class="filter-btn">
-                <i class=" "></i> productivity-tools
+            
+            <a href="/posts/travel/asia/asia_index.html" class="filter-btn">
+                <i class=" "></i> Asia
             </a>
-            <a href="/posts/tech/" class="filter-btn">
-                <i class=" "></i>
+            <a href="/posts/travel/europe/europe_index.html" class="filter-btn">
+                <i class=" "></i> Europe
             </a>
-            <a href="/posts/tech/" class="filter-btn">
-                <i class=" "></i>
-            </a>
-            <a href="/blog.html" class="filter-btn">
+            <a href="../../../blog.html" class="filter-btn">
                 <i class=" "></i> Other posts
             </a>
         </div>
 
-        <div id="posts" class="post-grid"></div>
+        <div id="europePosts"></div>
+
+        <script src="/js/posts-data.js"></script>
+        <script>
+          const europePosts = blogPosts.filter(post => post.region === "europe");
+          const europeContainer = document.getElementById("europePosts");
+        
+          europePosts.forEach((post, index) => {
+            const html = `
+              <div class="asia-section">
+                <img src="${post.image}" alt="${post.title}" class="post-img" />
+                <div class="asia-text">
+                  <h3>${post.title}</h3>
+                  <p>${post.intro}</p>
+                  <a href="${post.href}" class="readmore-link">Read more →</a>
+                </div>
+              </div>
+            `;
+            europeContainer.insertAdjacentHTML('beforeend', html);
+          });
+        </script>
+     
+
     </section>
-    <script>
-        const folders = ['/posts/tech'];
-        const container = document.getElementById('posts');
-
-        async function fetchPosts() {
-            const posts = [];
-
-            for (const folder of folders) {
-                const res = await fetch(folder);
-                const text = await res.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, 'text/html');
-                const links = [...doc.querySelectorAll('a')]
-                    .filter(a => a.href.endsWith('.html') && !a.href.includes('travel.html'));
-
-                for (const link of links) {
-                    const postRes = await fetch(link.href);
-                    const postText = await postRes.text();
-                    const postDoc = parser.parseFromString(postText, 'text/html');
-
-                    const title = postDoc.querySelector('title')?.textContent.trim() ||
-                        link.href.split('/').pop().replace('.html', '').replace(/\d{4}-\d{2}-\d{2}-/, '').replace(/-/g, ' ');
-                    const intro = postDoc.querySelector('meta[name="intro"]')?.content ||
-                        postDoc.querySelector('p')?.textContent.slice(0, 120) + '...';
-                    const date = postDoc.querySelector('meta[name="date"]')?.content || '2000-01-01';
-
-                    posts.push({ title, intro, href: link.href, date });
-                }
-            }
-
-            // 날짜순 정렬 (최신순)
-            posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-            // 카드 생성
-            posts.forEach(post => {
-                const card = document.createElement('div');
-                card.className = 'card';
-                card.innerHTML = `
-          <img src="/assets/img/default/travel.jpg" alt="${post.title}">
-          <div class="card-content">
-            <h3>${post.title}</h3>
-            <p>${post.intro}</p>
-            <a href="${post.href}">Read more →</a>
-          </div>
-        `;
-                container.appendChild(card);
-            });
-        }
-
-        fetchPosts();
-    </script>
-
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -226,16 +242,16 @@
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
     </script>
 
-</body>
 
-<div class="container text-center">
-    <a href="../../blog.html" class="btn btn-outline-light btn-sm mb-3">← Back to Blog</a>
-</div>
-
-<footer class="footer py-4" style="background-color: #181a1b;">
     <div class="container text-center">
-        <div style="color: #aaa;">© 2025 Minsun Kim | All rights reserved</div>
+        <a href="../../../blog.html" class="btn btn-outline-light btn-sm mb-3">← Back to Blog</a>
     </div>
-</footer>
+
+
+    <footer class="footer py-4" style="background-color: #181a1b;">
+        <div class="container text-center">
+            <div style="color: #aaa;">© 2025 Minsun Kim | All rights reserved</div>
+        </div>
+    </footer>
 
 </html>

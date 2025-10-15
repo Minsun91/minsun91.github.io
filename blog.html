@@ -20,6 +20,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="/js/load-navbar.js" defer></script>
+
 
     <style>
         /* 카테고리 필터 스타일 */
@@ -130,27 +132,7 @@
 <body id="page-top" style="background-color: #212529; color: beige;">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-          <a class="navbar-brand" href="/"> </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars ms-1"></i>
-          </button>
-      
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-              <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
-              <!-- <li class="nav-item"><a class="nav-link" href="/projects.html">Projects</a></li> -->
-              <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-        <div id="google_translate_element"></div>
-      </nav>
+    <div id="navbar-placeholder"></div>  
 
     <!-- Blog Section -->
     <section class="page-section" id="blog" style="background-color: #212529; padding-top: 120px; min-height: 100vh;">
@@ -161,9 +143,9 @@
             </div>
 
             <div class="category-filters" data-aos="fade-up" data-aos-duration="800">
-                <a href="/" class="filter-btn active">
+                <!-- <a href="/" class="filter-btn">
                   <i class="fas fa-th"></i> All
-                </a>
+                </a> -->
                 <a href="/posts/travel/travel.html" class="filter-btn">
                   <i class="fas fa-plane-departure"></i> Travel
                 </a>
@@ -187,7 +169,7 @@
                             <span class="category-badge badge-travel">Travel</span>
                             <h5 class="card-title" style="color: beige;">Sri Lanka 🇱🇰</h5>
                             <p class="card-text" style="color: #ccc;">Two weeks of wild animals, coconuts, and swimming in the island that runs on chai and smiles.</p>
-                            <a href="https://blog.naver.com/kms91716/224020408903" class="btn btn-outline-light btn-sm">Read more →</a>
+                            <a href="/posts/travel/asia/sri-lanka.html" class="btn btn-outline-light btn-sm">Read more →</a>
                         </div>
                     </div>
                 </div>
@@ -334,18 +316,16 @@
     </script>
 <script type="text/javascript">
     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'ko,en,de,zh-CN,es,fr',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'ko,en,de,zh-CN,es,fr',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
     }
-    </script>
-    
-    <script type="text/javascript" 
-            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-    </script>
-    
+</script>
 
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+</body>
 </html>

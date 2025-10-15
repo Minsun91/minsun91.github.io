@@ -32,151 +32,162 @@
     <link href="/css/styles.css" rel="stylesheet" />
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="/js/load-navbar.js" defer></script>
 
-    <style>    
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-            margin: 5px;
-            border-radius: 50%;
-            background-color: white;
-            padding: 5px;
-        }
+<style>
+    .logo-icon {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin: 5px;
+        border-radius: 50%;
+        background-color: white;
+        padding: 5px;
+    }
 
-        .social-icons {
-            display: none;
-            margin-top: 20px;
-            animation: fadeIn 0.5s ease-in-out;
-        }
+    .social-icons {
+        display: none;
+        margin-top: 20px;
+        animation: fadeIn 0.5s ease-in-out;
+    }
 
-        .social-icons a {
-            margin: 0 10px;
-            font-size: 24px;
-            text-decoration: none;
-        }
+    .social-icons a {
+        margin: 0 10px;
+        font-size: 24px;
+        text-decoration: none;
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-
-            40% {
-                transform: translateY(-5px);
-            }
-
-            60% {
-                transform: translateY(-3px);
-            }
-        }
-
-        #connectBtn {
-            animation: bounce 2s infinite;
-            cursor: pointer;
-        }
-
-        .social-hidden {
-            display: none;
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        #socialLinks a {
-            font-size: 30px;
-            margin: 0 10px;
-            color: #FFD700;
-            transition: transform 0.2s, color 0.2s;
-        }
-
-        #socialLinks a:hover {
-            transform: scale(1.2);
-            color: #fff;
-        }
-
-        /* 카테고리 섹션 스타일 */
-        .category-section {
-            margin-bottom: 80px;
-        }
-
-        .category-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #FFD700;
-        }
-
-        .category-icon {
-            font-size: 2.5rem;
-            margin-right: 20px;
-            color: #FFD700;
-        }
-
-        .category-title {
-            font-size: 2rem;
-            font-weight: bold;
-            color: beige;
-            margin: 0;
-        }
-
-        .category-description {
-            color: #aaa;
-            font-size: 1.1rem;
-            margin-top: 5px;
-        }
-
-        .blog-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
-        }
-        
-        .blog-card img {
-            width: 100%;
-            aspect-ratio: 8/9;
-            object-fit: cover;
-            } 
-
-        .blog-card:hover {
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
             transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
         }
 
-        .view-all-btn {
-            text-align: center;
-            margin-top: 30px;
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes bounce {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
         }
 
-        .view-all-btn a {
-            color: #FFD700;
-            text-decoration: none;
-            font-size: 1.1rem;
-            border: 2px solid #FFD700;
-            padding: 10px 30px;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-            display: inline-block;
+        40% {
+            transform: translateY(-5px);
         }
 
-        .view-all-btn a:hover {
-            background-color: #FFD700;
-            color: #212529;
+        60% {
+            transform: translateY(-3px);
         }
-       
-    </style>
+    }
 
-    
+    #connectBtn {
+        animation: bounce 2s infinite;
+        cursor: pointer;
+    }
+
+    .social-hidden {
+        display: none;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #socialLinks a {
+        font-size: 30px;
+        margin: 0 10px;
+        color: #FFD700;
+        transition: transform 0.2s, color 0.2s;
+    }
+
+    #socialLinks a:hover {
+        transform: scale(1.2);
+        color: #fff;
+    }
+
+    /* 카테고리 섹션 스타일 */
+    .category-section {
+        margin-bottom: 80px;
+    }
+
+    .category-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #FFD700;
+    }
+
+    .category-icon {
+        font-size: 2.5rem;
+        margin-right: 20px;
+        color: #FFD700;
+    }
+
+    .category-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: beige;
+        margin: 0;
+    }
+
+    .category-description {
+        color: #aaa;
+        font-size: 1.1rem;
+        margin-top: 5px;
+    }
+
+    .blog-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+    }
+
+    .blog-card img {
+        width: 100%;
+        aspect-ratio: 8/9;
+        object-fit: cover;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+    }
+
+    .view-all-btn {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .view-all-btn a {
+        color: #FFD700;
+        text-decoration: none;
+        font-size: 1.1rem;
+        border: 2px solid #FFD700;
+        padding: 10px 30px;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+
+    .view-all-btn a:hover {
+        background-color: #FFD700;
+        color: #212529;
+    }
+
+    .loading {
+        color: #FFD700;
+        text-align: center;
+        padding: 2rem;
+        font-size: 1.2rem;
+    }
+</style>
+
 </head>
 
 <body id="page-top">
@@ -184,43 +195,24 @@
     <div id="image-container"></div>
     <script id="dsq-count-scr" src="//minsunportfolio.disqus.com/count.js" async></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-          <a class="navbar-brand" href="/"> </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars ms-1"></i>
-          </button>
-      
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-              <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
-              <!-- <li class="nav-item"><a class="nav-link" href="/projects.html">Projects</a></li> -->
-              <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-            </ul>
-            <div id="google_translate_element"></div>
-          </div>
-        </div>
-        
-      </nav>
-      
+
+    <div id="navbar-placeholder"></div>      
+
     <header class="masthead" style="display:flex;align-items: center;justify-content: space-around;">
 
         <div class="text-container">
             <div class="container" style="margin-bottom: 30px; margin-top: 100px; text-align: center;">
                 <!-- <div class="masthead-subheading">SCM Specialist</div> -->
                 <div class="text-container">
-                    <div class="container" style="margin-bottom: 30px; margin-top: 100px; display: flex; align-items:flex-start; justify-content: center;">
+                    <div class="container"
+                        style="margin-bottom: 30px; margin-top: 100px; display: flex; align-items:flex-start; justify-content: center;">
                         <div class="masthead-heading text-uppercase text" style="text-align:center;">
                         </div>
-                        <img src="assets/img/slide.png" alt="Profile Image" class="profile-image" style="display:none; height:100px;">
+                        <img src="assets/img/slide.png" alt="Profile Image" class="profile-image"
+                            style="display:none; height:100px;">
                     </div>
                 </div>
-        
+
                 <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
                     I work in SCM — a professional and very personal shopper. <br>
                     But this space is more about everything beyond work: <br>
@@ -228,45 +220,47 @@
                     and the small routines that keep me grounded. <br>
                     </b><br><br>
                 </p>
-                                        
-                    <div style="text-align:center;">
-                        <button id="connectBtn" class="btn btn-primary btn-xl text-uppercase">
-  CONNECT WITH ME <i class="fas fa-chevron-down"></i>
-</button>
 
-        <div id="socialLinks" class="social-hidden">
-        <a href="https://linkedin.com/in/minsunkim167" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.youtube.com/@matagom10" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://blog.naver.com/kms91716" target="_blank"><i class="fas fa-pen"></i></a>
-        <a href="https://www.instagram.com/matagom10" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-                            </div>
-                      
-                      <script>
-                        const connectBtn = document.getElementById('connectBtn');
-                        const socialLinks = document.getElementById('socialLinks');
-                        const arrowIcon = connectBtn.querySelector("i");
-                      
-                        connectBtn.addEventListener('click', () => {
-                          // 토글 보이기/숨기기
-                          if (socialLinks.style.display === "block") {
+                <div style="text-align:center;">
+                    <button id="connectBtn" class="btn btn-primary btn-xl text-uppercase">
+                        CONNECT WITH ME <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div id="socialLinks" class="social-hidden">
+                        <a href="https://linkedin.com/in/minsunkim167" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/@matagom10" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://blog.naver.com/kms91716" target="_blank"><i class="fas fa-pen"></i></a>
+                        <a href="https://www.instagram.com/matagom10" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <script>
+                    const connectBtn = document.getElementById('connectBtn');
+                    const socialLinks = document.getElementById('socialLinks');
+                    const arrowIcon = connectBtn.querySelector("i");
+
+                    connectBtn.addEventListener('click', () => {
+                        // 토글 보이기/숨기기
+                        if (socialLinks.style.display === "block") {
                             socialLinks.style.display = "none";
                             arrowIcon.classList.remove("fa-chevron-up");
                             arrowIcon.classList.add("fa-chevron-down");
-                          } else {
+                        } else {
                             socialLinks.style.display = "block";
                             arrowIcon.classList.remove("fa-chevron-down");
                             arrowIcon.classList.add("fa-chevron-up");
-                          }
-                        });
-                      </script>
+                        }
+                    });
+                </script>
 
             </div>
 
         </div>
-             
+
     </header>
-    
+
     <div style="background-color: #212529; position:relative; height:100px; display:flex;align-items: center;">
         <div class="btn-motion5">
             <span></span>
@@ -277,72 +271,72 @@
     <section class="page-section bg-light" id="blog" style="background-color: #212529; padding: 100px 0;">
         <div class="container">
 
-<!-- Travel Section -->
-<div class="category-section" data-aos="fade-up" data-aos-duration="1000">
-    <div class="category-header" style="justify-content: center;">
-        <div class="category-icon">
-            <i class="fas fa-plane-departure"></i>
-        </div>
-        <div style="text-align: center;">
-            <h2 class="category-title">Travel</h2>
-            <p class="category-description">Adventures, stories, and lessons from the road</p>
-        </div>
-    </div>
+            <!-- Travel Section -->
+            <div class="category-section" data-aos="fade-up" data-aos-duration="1000">
+                <div class="category-header" style="justify-content: center;">
+                    <div class="category-icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <div style="text-align: center;">
+                        <h2 class="category-title">Travel</h2>
+                        <p class="category-description">Adventures, stories, and lessons from the road</p>
+                    </div>
+                </div>
 
-    <!-- 여기에 동적으로 카드가 들어감 -->
-    <div class="row" id="travel-posts-container" style="justify-content: center;">
-        <!-- JavaScript로 자동 생성됨 -->
-    </div>
+                <!-- 여기에 동적으로 카드가 들어감 -->
+                <div class="row" id="travel-posts-container" style="justify-content: center;">
+                    <!-- JavaScript로 자동 생성됨 -->
+                </div>
 
-    <div class="view-all-btn">
-        <a href="/posts/travel/travel.html">View all Travel posts →</a>
-    </div>
-</div>
+                <div class="view-all-btn">
+                    <a href="/posts/travel/travel.html">View all Travel posts →</a>
+                </div>
+            </div>
 
             <!-- Life Section -->
-<div class="category-section" data-aos="fade-up" data-aos-duration="1000">
-    <div class="category-header" style="justify-content: center;">
-        <div class="category-icon">
-            <i class="fas fa-heart"></i>
-        </div>
-        <div style="text-align: center;">
-            <h2 class="category-title">Life</h2>
-            <p class="category-description">Things I love, moments I cherish, and everyday joys</p>
-        </div>
-    </div>
+            <div class="category-section" data-aos="fade-up" data-aos-duration="1000">
+                <div class="category-header" style="justify-content: center;">
+                    <div class="category-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div style="text-align: center;">
+                        <h2 class="category-title">Life</h2>
+                        <p class="category-description">Things I love, moments I cherish, and everyday joys</p>
+                    </div>
+                </div>
 
-    <div class="row" id="life-posts-container" style="justify-content: center;">
-        <!-- JavaScript로 자동 생성됨 -->
-    </div>
+                <div class="row" id="life-posts-container" style="justify-content: center;">
+                    <!-- JavaScript로 자동 생성됨 -->
+                </div>
 
-    <div class="view-all-btn">
-        <a href="/posts/life/life.html">View all Life posts →</a>
-    </div>
-</div>
+                <div class="view-all-btn">
+                    <a href="/posts/life/life.html">View all Life posts →</a>
+                </div>
+            </div>
 
             <!-- Tech Section -->
-<div class="category-section" data-aos="fade-up" data-aos-duration="1000">
-    <div class="category-header" style="justify-content: center;">
-        <div class="category-icon">
-            <i class="fas fa-code"></i>
-        </div>
-        <div style="text-align: center;">
-            <h2 class="category-title">Tech</h2>
-            <p class="category-description">Tools, automations, and digital experiments</p>
-        </div>
-    </div>
+            <div class="category-section" data-aos="fade-up" data-aos-duration="1000">
+                <div class="category-header" style="justify-content: center;">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div style="text-align: center;">
+                        <h2 class="category-title">Tech</h2>
+                        <p class="category-description">Tools, automations, and digital experiments</p>
+                    </div>
+                </div>
 
-    <div class="row" id="tech-posts-container" style="justify-content: center;">
-        <!-- JavaScript로 자동 생성됨 -->
-    </div>
+                <div class="row" id="tech-posts-container" style="justify-content: center;">
+                    <!-- JavaScript로 자동 생성됨 -->
+                </div>
 
-    <div class="view-all-btn">
-        <a href="/posts/tech/tech.html">View all Tech posts →</a>
-    </div>
-</div>
-</section>
+                <div class="view-all-btn">
+                    <a href="/posts/tech/tech.html">View all Tech posts →</a>
+                </div>
+            </div>
+    </section>
 
-   
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
@@ -357,24 +351,22 @@
         });
     </script>
 
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'ko,en,de,zh-CN,es,fr',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-    </script>
-    
-    <script type="text/javascript" 
-            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'ko,en,de,zh-CN,es,fr',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
     </script>
 
-<script src="js/posts-data.js"></script>
-<script src="js/blog-renderer.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
 
+    <script src="js/posts-data.js"></script>
+    <script src="js/blog-renderer.js"></script>
 </body>
 
 <footer class="footer py-4" style="background-color: #181a1b;">
@@ -382,5 +374,3 @@
         <div style="color: #aaa;">© 2025 Minsun Kim | All rights reserved</div>
     </div>
 </footer>
-
-

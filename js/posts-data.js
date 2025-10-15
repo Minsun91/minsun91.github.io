@@ -4,16 +4,25 @@ const blogPosts = [
       title: "Sri Lanka 🇱🇰",
       intro: "Two weeks of wild animals, coconuts, and swimming in the island that runs on chai and smiles.",
       category: "travel",
-      region: "sri-lanka",
-      href: "/posts/travel/asia/sri-lanka",
+      region: "asia",
+      href: "/posts/travel/asia/sri-lanka.html",
       image: "assets/img/post/travel/sigiriya.jpg",
+      date: "2025-09-09"
+    },
+    {
+      title: "Sri Lanka 🇱🇰",
+      intro: "Two weeks of wild animals, coconuts, and swimming in the island that runs on chai and smiles.",
+      category: "travel",
+      region: "asia",
+      href: "/posts/travel/asia/sri-lanka-ella.html",
+      image: "assets/img/post/travel/sri.jpg",
       date: "2025-09-09"
     },
     {
       title: "Slovenia 🇸🇮",
       intro: "Silence, Beauty, and Sticker Shock",
       category: "travel",
-      region: "japan",
+      region: "europe",
       href: "/posts/travel/europe/slovenia.html",
       image: "/assets/img/post/travel/slovenia.jpg",
       date: "2025-01-10"
@@ -26,6 +35,15 @@ const blogPosts = [
       href: "https://blog.naver.com/kms91716/223514759280",
       image: "/assets/img/post/travel/wales.jpeg",
       date: "2025-01-05"
+    },
+    {
+      title: "Sicily 🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+      intro: "My personal favourite place in Europe",
+      category: "travel",
+      region: "europe",
+      href: "/posts/travel/europe/sicily.html",
+      image: "https://postfiles.pstatic.net/MjAyNTA0MDhfMTYz/MDAxNzQ0MDUzNDAwNTk1.H8rZq7cuVARIciAKAgKk3pzWSqaLC2IUOg-zmZ9K2Skg.oWjirYq9HezRx-nBMnrYCWYWzWAbsXH5QnFlGrjpP-4g.JPEG/IMG_2698.jpg?type=w773",
+      date: "2025-04-01"
     },
     {
       title: "My Favorite Scents",
