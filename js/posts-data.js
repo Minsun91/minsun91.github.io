@@ -37,7 +37,7 @@ const blogPosts = [
       date: "2025-01-05"
     },
     {
-      title: "Sicily 🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+      title: "Sicily 🇮🇹",
       intro: "My personal favourite place in Europe",
       category: "travel",
       region: "europe",

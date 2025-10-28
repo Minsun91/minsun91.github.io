@@ -1,9 +1,21 @@
 const videos = [
+  {
+      title: "Brezellauf 2025 🥨",
+      region: "daily",
+      videoUrl: "https://www.youtube.com/embed/AUXZc_SgZmg",
+      description: "#running #frankfurt #breztel #laufen",
+    },
     {
       title: "A Walk Through Bordeaux",
       region: "europe",
       videoUrl: "https://youtube.com/embed/smc5wg-zy4Q?si=pm17tu4heX4k4iBz",
       description: "#Bordeaux #saintemilion #winetasting #winerytour #wine 🍷.",
+    },
+    {
+      title: "Daily running in Frankfurt",
+      region: "daily",
+      videoUrl: "https://www.youtube.com/embed/3-onHbo7Mkw",
+      description: "#running #frankfurt #breztel #laufen #mainriver",
     },
     {
       title: "Hiking in frankfurt",
